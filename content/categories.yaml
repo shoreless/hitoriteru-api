@@ -11,7 +11,7 @@
   label_en: weather
   rule_en: Kinds of weather
   min_level: 5
-  members: [雨, 雪, 風, 晴れ, 曇り, 雲, 台風]
+  members: [雨, 雪, 風, 晴れ, 曇り, 雲, 台風, 雷, 霧]
   excludes: [shizen]
 
 - id: tabemono
@@ -21,6 +21,7 @@
   rule_en: Things you eat
   min_level: 5
   members: [パン, 肉, 魚, 卵, 野菜, 果物, ご飯, お菓子, 牛肉, 豚肉, 鶏肉, 朝ご飯, 晩ご飯]
+  excludes: [kudamono, yasai, ryouri, oyatsu]
   near_miss:
     牛肉: "belongs with 食べ物; it contains 牛 (cow) but it's beef"
     豚肉: "belongs with 食べ物; it contains 豚 (pig) but it's pork"
@@ -51,7 +52,7 @@
   label_en: animals
   rule_en: Animals
   min_level: 5
-  members: [犬, 猫, 鳥, 馬, 牛, 豚, 虫]
+  members: [犬, 猫, 鳥, 馬, 牛, 豚, 虫, ライオン, パンダ, キリン, 象, 猿, 熊, うさぎ, ねずみ, 羊, きつね]
 
 - id: kazoku
   type: meaning
@@ -69,7 +70,7 @@
   label_en: vehicles
   rule_en: Ways to travel
   min_level: 5
-  members: [車, 電車, バス, 自転車, 飛行機, タクシー, 地下鉄, 船, 自動車]
+  members: [車, 電車, バス, 自転車, 飛行機, タクシー, 地下鉄, 船, 自動車, トラック, バイク, 救急車]
   near_miss:
     自動車: "belongs with 乗り物; it contains 動 (move) but it's a car"
     飛行機: "belongs with 乗り物; it contains 飛 like 飛ぶ, but it's a plane"
@@ -80,9 +81,10 @@
   label_en: colours
   rule_en: Colours
   min_level: 5
-  members: [赤, 青, 白, 黒, 黄色, 茶色, 緑]
+  members: [赤, 青, 白, 黒, 黄色, 茶色, 緑, ピンク, オレンジ, 紫, 灰色, 金色, 銀色, 水色]
   near_miss:
     茶色: "belongs with 色; it contains 茶 (tea) but it's the colour brown"
+    水色: "belongs with 色; it contains 水 (water) but it's light blue"
 
 - id: ichinichi
   type: meaning
@@ -128,17 +130,17 @@
   rule_en: The natural world around you
   min_level: 5
   members: [山, 川, 海, 空, 池, 花, 木, 森, 島, 石, 星]
-  excludes: [tenki]
+  excludes: [tenki, shokubutsu]
 
 - id: heya
   type: meaning
-  label: "部[へ]屋[や]"
-  label_en: in a room
-  rule_en: Things in a room at home
+  label: "家[か]具[ぐ]"
+  label_en: furniture
+  rule_en: Furniture and things you keep in a room
   min_level: 5
-  members: [机, 椅子, 窓, ドア, ベッド, 冷蔵庫, 本棚, テーブル, 時計, テレビ, ストーブ, 押し入れ]
+  members: [机, 椅子, ベッド, 本棚, テーブル, 時計, ソファ, カーテン, 布団, 鏡]
   near_miss:
-    本棚: "belongs with 部屋; it contains 本 (book) but it's the shelf"
+    本棚: "belongs with 家具; it contains 本 (book) but it's the shelf"
 
 - id: bunbougu
   type: meaning
@@ -187,13 +189,205 @@
   min_level: 5
   members: [行く, 来る, 帰る, 歩く, 走る, 泳ぐ, 飛ぶ, 登る, 渡る, 出かける]
 
+- id: kuni
+  type: meaning
+  label: "国[くに]"
+  label_en: countries
+  rule_en: Countries
+  min_level: 5
+  members: [日本, 中国, 韓国, アメリカ, イギリス, フランス, ドイツ, イタリア, カナダ, インド, ブラジル, スペイン]
+
+- id: gengo
+  type: meaning
+  label: "言[げん]語[ご]"
+  label_en: languages
+  rule_en: Languages
+  min_level: 5
+  members: [日本語, 英語, 中国語, 韓国語, フランス語, スペイン語, ドイツ語, イタリア語]
+  near_miss:
+    日本語: "belongs with 言語; the 語 on the end makes it the language, not the country"
+
+- id: undou
+  type: meaning
+  label: "運[うん]動[どう]"
+  label_en: sports
+  rule_en: Sports and martial arts
+  min_level: 5
+  members: [サッカー, 野球, テニス, 水泳, ゴルフ, スキー, 柔道, 空手, 卓球, 相撲, バスケ, マラソン]
+  near_miss:
+    水泳: "belongs with 運動; it contains 水 (water) but it's swimming"
+    空手: "belongs with 運動; it contains 空 (sky) and 手 (hand) but it's karate"
+
+- id: gakki
+  type: meaning
+  label: "楽[がっ]器[き]"
+  label_en: instruments
+  rule_en: Musical instruments
+  min_level: 5
+  members: [ピアノ, ギター, バイオリン, ドラム, 太鼓, 笛, トランペット, フルート, 三味線, 琴]
+
+- id: kudamono
+  type: meaning
+  label: "果[くだ]物[もの]"
+  label_en: fruit
+  rule_en: Fruit
+  min_level: 5
+  members: [りんご, バナナ, みかん, いちご, ぶどう, もも, メロン, スイカ, レモン, なし, さくらんぼ]
+  excludes: [tabemono]
+
+- id: yasai
+  type: meaning
+  label: "野[や]菜[さい]"
+  label_en: vegetables
+  rule_en: Vegetables
+  min_level: 5
+  members: [トマト, キャベツ, にんじん, 玉ねぎ, じゃがいも, きゅうり, ピーマン, なす, ねぎ, 大根, レタス, かぼちゃ]
+  excludes: [tabemono]
+
+- id: ryouri
+  type: meaning
+  label: "料[りょう]理[り]"
+  label_en: dishes
+  rule_en: Dishes you order or cook
+  min_level: 5
+  members: [寿司, ラーメン, 天ぷら, うどん, そば, カレー, 刺身, 焼き鳥, すき焼き, とんかつ, 味噌汁, お好み焼き]
+  excludes: [tabemono]
+  near_miss:
+    焼き鳥: "belongs with 料理; it contains 鳥 (bird) but it's grilled chicken"
+
+- id: oyatsu
+  type: meaning
+  label: "おやつ"
+  label_en: snacks
+  rule_en: Sweets and snacks
+  min_level: 5
+  members: [ケーキ, アイス, チョコ, クッキー, プリン, ドーナツ, 飴, ガム, 団子, せんべい, パフェ, 餅]
+  excludes: [tabemono]
+  near_miss:
+    飴: "belongs with おやつ; it sounds like 雨 (rain) but it's candy"
+
+- id: youbi
+  type: meaning
+  label: "曜[よう]日[び]"
+  label_en: days
+  rule_en: Days of the week
+  min_level: 5
+  members: [月曜日, 火曜日, 水曜日, 木曜日, 金曜日, 土曜日, 日曜日, 週末, 平日]
+  near_miss:
+    水曜日: "belongs with 曜日; it contains 水 (water) but it's Wednesday"
+    木曜日: "belongs with 曜日; it contains 木 (tree) but it's Thursday"
+
+- id: kisetsu
+  type: meaning
+  label: "季[き]節[せつ]"
+  label_en: seasons
+  rule_en: Seasons and seasonal events
+  min_level: 5
+  members: [春, 夏, 秋, 冬, お正月, 花見, 夏休み, 花火, 祭り, 紅葉, 梅雨]
+  near_miss:
+    花見: "belongs with 季節; it contains 花 (flower) but it's a spring outing"
+    花火: "belongs with 季節; it contains 花 (flower) but it's summer fireworks"
+
+- id: okane
+  type: meaning
+  label: "お金[かね]"
+  label_en: money
+  rule_en: Money and paying for things
+  min_level: 5
+  members: [お札, 小銭, 財布, 値段, 貯金, 給料, 税金, 現金, お釣り]
+
+- id: kaden
+  type: meaning
+  label: "家[か]電[でん]"
+  label_en: appliances
+  rule_en: Electrical appliances at home
+  min_level: 5
+  members: [洗濯機, 掃除機, エアコン, ドライヤー, 扇風機, 炊飯器, アイロン, テレビ, 冷蔵庫, ストーブ, 電子レンジ]
+  near_miss:
+    扇風機: "belongs with 家電; it contains 風 (wind) but it's an electric fan"
+
+- id: sumaho
+  type: meaning
+  label: "スマホ"
+  label_en: phone
+  rule_en: Things you use or find on your phone
+  min_level: 5
+  members: [アプリ, メール, 写真, 動画, 絵文字, ゲーム, 地図, カメラ, 画面, ネット]
+
+- id: ryokou
+  type: meaning
+  label: "旅[りょ]行[こう]"
+  label_en: travel
+  rule_en: Things for a trip away
+  min_level: 5
+  members: [パスポート, 空港, 荷物, お土産, 観光, 旅館, 温泉, ガイド]
+  excludes: [machi]
+  near_miss:
+    空港: "belongs with 旅行; it contains 空 (sky) but it's the airport"
+
+- id: seikaku
+  type: meaning
+  label: "性[せい]格[かく]"
+  label_en: personality
+  rule_en: What someone is like
+  min_level: 4
+  members: [優しい, 親切, 厳しい, 明るい, 真面目, 意地悪, 素直, わがまま]
+
+- id: aji
+  type: meaning
+  label: "味[あじ]"
+  label_en: taste
+  rule_en: How food tastes
+  min_level: 5
+  members: [甘い, 辛い, 苦い, 酸っぱい, しょっぱい, 美味しい, まずい, 濃い]
+
+- id: shokubutsu
+  type: meaning
+  label: "植[しょく]物[ぶつ]"
+  label_en: plants
+  rule_en: Named flowers and trees
+  min_level: 5
+  members: [桜, バラ, ひまわり, チューリップ, 松, 竹, 梅, 菊, 朝顔]
+  excludes: [shizen]
+  near_miss:
+    朝顔: "belongs with 植物; it contains 朝 and 顔 but it's a flower, the morning glory"
+
+- id: kyoushitsu
+  type: meaning
+  label: "教[きょう]室[しつ]"
+  label_en: at school
+  rule_en: Things in a school day
+  min_level: 5
+  members: [黒板, 宿題, 試験, 授業, 教科書, 給食, 時間割, 休み時間, 運動会]
+  near_miss:
+    黒板: "belongs with 教室; it contains 黒 (black) but it's the blackboard"
+    運動会: "belongs with 教室; it's the school sports day, not a sport"
+
+- id: ie
+  type: meaning
+  label: "家[いえ]"
+  label_en: the house
+  rule_en: Rooms and parts of a house
+  min_level: 5
+  members: [台所, 玄関, お風呂, トイレ, 庭, 居間, 廊下, 屋根, 階段, 窓, ドア, 押し入れ]
+  near_miss:
+    お風呂: "belongs with 家; it contains 風 (wind) but it's the bath"
+
+- id: chouri
+  type: meaning
+  label: "調[ちょう]理[り]"
+  label_en: cooking
+  rule_en: What you do to food in the kitchen
+  min_level: 5
+  members: [切る, 焼く, 煮る, 揚げる, 炒める, 茹でる, 混ぜる, 洗う, 蒸す]
+
 - id: shigoto
   type: meaning
   label: "仕[し]事[ごと]"
   label_en: jobs
   rule_en: People named by their job
-  min_level: 4
-  members: [医者, 先生, 警官, 歌手, 運転手, 店員]
+  min_level: 5
+  members: [医者, 先生, 警官, 歌手, 運転手, 店員, 会社員, 看護師, 消防士, 大工, 美容師, 弁護士, パイロット, シェフ]
 
 - id: kanjou
   type: meaning
