@@ -1,0 +1,86 @@
+# Hand-authored starter vocabulary. Will be generated from JMdict + a JLPT list later (see spec: Content data).
+#
+# Key: the headword (also the word's id).
+#   furigana: headword with readings in brackets after each kanji run: 自[じ]転[てん]車[しゃ].
+#             Omit for kana-only words. Use one bracket for words read as a whole: 今日[きょう].
+#   reading:  kana reading (derived from furigana when omitted).
+#   pos:      part of speech. glosses: 1–3 English glosses. jlpt: 5 (N5) … 1 (N1).
+
+# 天気 · weather
+雨:   { furigana: "雨[あめ]", pos: noun, glosses: [rain], jlpt: 5 }
+雪:   { furigana: "雪[ゆき]", pos: noun, glosses: [snow], jlpt: 5 }
+風:   { furigana: "風[かぜ]", pos: noun, glosses: [wind], jlpt: 5 }
+晴れ: { furigana: "晴[は]れ", pos: noun, glosses: [clear weather, sunny], jlpt: 5 }
+曇り: { furigana: "曇[くも]り", pos: noun, glosses: [cloudy weather], jlpt: 5 }
+雲:   { furigana: "雲[くも]", pos: noun, glosses: [cloud], jlpt: 5 }
+
+# 食べ物 · food
+パン: { reading: パン, pos: noun, glosses: [bread], jlpt: 5 }
+肉:   { furigana: "肉[にく]", pos: noun, glosses: [meat], jlpt: 5 }
+魚:   { furigana: "魚[さかな]", pos: noun, glosses: [fish], jlpt: 5 }
+卵:   { furigana: "卵[たまご]", pos: noun, glosses: [egg], jlpt: 5 }
+野菜: { furigana: "野[や]菜[さい]", pos: noun, glosses: [vegetable], jlpt: 5 }
+果物: { furigana: "果物[くだもの]", pos: noun, glosses: [fruit], jlpt: 5 }
+
+# 飲み物 · drinks
+水:     { furigana: "水[みず]", pos: noun, glosses: [water], jlpt: 5 }
+お茶:   { furigana: "お茶[ちゃ]", pos: noun, glosses: [green tea, tea], jlpt: 5 }
+コーヒー: { reading: コーヒー, pos: noun, glosses: [coffee], jlpt: 5 }
+牛乳:   { furigana: "牛[ぎゅう]乳[にゅう]", pos: noun, glosses: [milk], jlpt: 5 }
+お酒:   { furigana: "お酒[さけ]", pos: noun, glosses: [alcohol, sake], jlpt: 5 }
+ジュース: { reading: ジュース, pos: noun, glosses: [juice], jlpt: 5 }
+
+# 体 · body
+頭: { furigana: "頭[あたま]", pos: noun, glosses: [head], jlpt: 5 }
+目: { furigana: "目[め]", pos: noun, glosses: [eye], jlpt: 5 }
+耳: { furigana: "耳[みみ]", pos: noun, glosses: [ear], jlpt: 5 }
+口: { furigana: "口[くち]", pos: noun, glosses: [mouth], jlpt: 5 }
+手: { furigana: "手[て]", pos: noun, glosses: [hand], jlpt: 5 }
+足: { furigana: "足[あし]", pos: noun, glosses: [foot, leg], jlpt: 5 }
+
+# 動物 · animals
+犬: { furigana: "犬[いぬ]", pos: noun, glosses: [dog], jlpt: 5 }
+猫: { furigana: "猫[ねこ]", pos: noun, glosses: [cat], jlpt: 5 }
+鳥: { furigana: "鳥[とり]", pos: noun, glosses: [bird], jlpt: 5 }
+馬: { furigana: "馬[うま]", pos: noun, glosses: [horse], jlpt: 5 }
+牛: { furigana: "牛[うし]", pos: noun, glosses: [cow, cattle], jlpt: 5 }
+豚: { furigana: "豚[ぶた]", pos: noun, glosses: [pig], jlpt: 5 }
+
+# 家族 · family
+父: { furigana: "父[ちち]", pos: noun, glosses: [(my) father], jlpt: 5 }
+母: { furigana: "母[はは]", pos: noun, glosses: [(my) mother], jlpt: 5 }
+兄: { furigana: "兄[あに]", pos: noun, glosses: [(my) older brother], jlpt: 5 }
+姉: { furigana: "姉[あね]", pos: noun, glosses: [(my) older sister], jlpt: 5 }
+弟: { furigana: "弟[おとうと]", pos: noun, glosses: [younger brother], jlpt: 5 }
+妹: { furigana: "妹[いもうと]", pos: noun, glosses: [younger sister], jlpt: 5 }
+
+# 乗り物 · vehicles
+車:     { furigana: "車[くるま]", pos: noun, glosses: [car], jlpt: 5 }
+電車:   { furigana: "電[でん]車[しゃ]", pos: noun, glosses: [train], jlpt: 5 }
+バス:   { reading: バス, pos: noun, glosses: [bus], jlpt: 5 }
+自転車: { furigana: "自[じ]転[てん]車[しゃ]", pos: noun, glosses: [bicycle], jlpt: 5 }
+飛行機: { furigana: "飛[ひ]行[こう]機[き]", pos: noun, glosses: [aeroplane], jlpt: 5 }
+タクシー: { reading: タクシー, pos: noun, glosses: [taxi], jlpt: 5 }
+
+# 色 · colours
+赤:   { furigana: "赤[あか]", pos: noun, glosses: [red], jlpt: 5 }
+青:   { furigana: "青[あお]", pos: noun, glosses: [blue, green], jlpt: 5 }
+白:   { furigana: "白[しろ]", pos: noun, glosses: [white], jlpt: 5 }
+黒:   { furigana: "黒[くろ]", pos: noun, glosses: [black], jlpt: 5 }
+黄色: { furigana: "黄色[きいろ]", pos: noun, glosses: [yellow], jlpt: 5 }
+茶色: { furigana: "茶[ちゃ]色[いろ]", pos: noun, glosses: [brown], jlpt: 5 }
+
+# 一日 · times of day
+朝:   { furigana: "朝[あさ]", pos: noun, glosses: [morning], jlpt: 5 }
+昼:   { furigana: "昼[ひる]", pos: noun, glosses: [noon, daytime], jlpt: 5 }
+夕方: { furigana: "夕[ゆう]方[がた]", pos: noun, glosses: [evening, dusk], jlpt: 5 }
+晩:   { furigana: "晩[ばん]", pos: noun, glosses: [evening, night], jlpt: 5 }
+夜:   { furigana: "夜[よる]", pos: noun, glosses: [night], jlpt: 5 }
+午後: { furigana: "午[ご]後[ご]", pos: noun, glosses: [afternoon, p.m.], jlpt: 5 }
+
+# 電 · shared kanji (N4+)
+電話:   { furigana: "電[でん]話[わ]", pos: noun, glosses: [telephone, phone call], jlpt: 5 }
+電気:   { furigana: "電[でん]気[き]", pos: noun, glosses: [electricity, electric light], jlpt: 5 }
+電池:   { furigana: "電[でん]池[ち]", pos: noun, glosses: [battery], jlpt: 3 }
+停電:   { furigana: "停[てい]電[でん]", pos: noun, glosses: [power outage], jlpt: 2 }
+電子レンジ: { furigana: "電[でん]子[し]レンジ", pos: noun, glosses: [microwave oven], jlpt: 3 }

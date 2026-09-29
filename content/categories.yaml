@@ -1,0 +1,88 @@
+# Hand-curated categories. Members are headwords from words.yaml.
+#   type:       meaning | script | shared_kanji | counter | reading
+#   label:      Japanese label, with furigana in the same bracket style as words.yaml.
+#   min_level:  lowest content level (5 = N5) the category may appear at.
+#   excludes:   category ids that must never share a board with this one.
+#   near_miss:  per member, the note shown when it is dropped on the wrong foundation.
+
+- id: tenki
+  type: meaning
+  label: "天[てん]気[き]"
+  label_en: weather
+  rule_en: Weather words
+  min_level: 5
+  members: [雨, 雪, 風, 晴れ, 曇り, 雲]
+
+- id: tabemono
+  type: meaning
+  label: "食[た]べ物[もの]"
+  label_en: food
+  rule_en: Things you eat
+  min_level: 5
+  members: [パン, 肉, 魚, 卵, 野菜, 果物]
+
+- id: nomimono
+  type: meaning
+  label: "飲[の]み物[もの]"
+  label_en: drinks
+  rule_en: Things you drink
+  min_level: 5
+  members: [水, お茶, コーヒー, 牛乳, お酒, ジュース]
+  near_miss:
+    牛乳: "belongs with 飲み物; it contains 牛 (cow) but it's something you drink"
+
+- id: karada
+  type: meaning
+  label: "体[からだ]"
+  label_en: body
+  rule_en: Parts of the body
+  min_level: 5
+  members: [頭, 目, 耳, 口, 手, 足]
+
+- id: doubutsu
+  type: meaning
+  label: "動[どう]物[ぶつ]"
+  label_en: animals
+  rule_en: Animals
+  min_level: 5
+  members: [犬, 猫, 鳥, 馬, 牛, 豚]
+
+- id: kazoku
+  type: meaning
+  label: "家[か]族[ぞく]"
+  label_en: family
+  rule_en: Family members (your own)
+  min_level: 5
+  members: [父, 母, 兄, 姉, 弟, 妹]
+
+- id: norimono
+  type: meaning
+  label: "乗[の]り物[もの]"
+  label_en: vehicles
+  rule_en: Ways to travel
+  min_level: 5
+  members: [車, 電車, バス, 自転車, 飛行機, タクシー]
+
+- id: iro
+  type: meaning
+  label: "色[いろ]"
+  label_en: colours
+  rule_en: Colours
+  min_level: 5
+  members: [赤, 青, 白, 黒, 黄色, 茶色]
+
+- id: ichinichi
+  type: meaning
+  label: "一[いち]日[にち]"
+  label_en: times of day
+  rule_en: Parts of the day
+  min_level: 5
+  members: [朝, 昼, 夕方, 晩, 夜, 午後]
+
+- id: den
+  type: shared_kanji
+  label: "電[でん]"
+  label_en: electricity
+  rule_en: Words containing the kanji 電, meaning electricity
+  min_level: 4
+  members: [電車, 電話, 電気, 電池, 停電, 電子レンジ]
