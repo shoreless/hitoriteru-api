@@ -33,7 +33,7 @@ Learning happens at three moments, and they shape how you write content:
 | On the card | Headword, plus furigana and romaji depending on their reading-aid setting | `furigana`, `romaji` |
 | Long-press a card | Reading, romaji, part of speech, glosses, JLPT level. **Never the word's category.** | `glosses`, `pos`, `jlpt` |
 | Card lands on its foundation | A toast: `雨 · ame · rain` | first gloss |
-| Card dropped on the wrong foundation | A short note, costing the player a move | `near_miss` |
+| Card dropped on the wrong foundation | The card snaps back (free) with a short note | `near_miss` |
 
 The puzzle is working out which words belong together. **Anything that gives the category away before the
 card is placed spoils the board**, so glosses must describe the word, not its group.
