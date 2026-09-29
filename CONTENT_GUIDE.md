@@ -75,6 +75,7 @@ long vowel from two morphemes (思う is *omou*, not *omō*), so if a romaji com
 
 ```yaml
 思う: omou
+ICカード: IC kādo   # Latin letters read out as katakana otherwise (aishīkādo)
 ```
 
 **Gloss rules**
@@ -120,8 +121,10 @@ long vowel from two morphemes (思う is *omou*, not *omō*), so if a romaji com
   warning: den can't be dealt at N4: 3 members in range, needs 5
   ```
   Aim for 6–8 members in range, so boards vary.
-- **Short headwords.** Cards are small, and long words shrink to fit (電子レンジ is about the limit). Prefer
-  words of 1–4 characters.
+- **Short headwords.** Cards are small, and long words shrink to fit. Six characters (サンドイッチ, ポップコーン)
+  still fit on the narrowest card but get small; prefer 1–4 characters and keep 6 as the ceiling. To see how a
+  word really looks, open **Settings → Card gallery** in a debug build of the app: every word as a card, at both
+  card widths and every reading-aid level.
 - **Mixed difficulty inside the level**, so every board has an easy way in.
 
 ### Words that fit two categories
@@ -207,13 +210,14 @@ git commit -m "Add 家 category (house and home)"
 git push
 ```
 
-- **Errors** (a member that isn't in `words.yaml`, a malformed furigana, 0 or 4+ glosses) stop the build.
-  Nothing is written until they're fixed.
+- **Errors** (a member that isn't in `words.yaml`, a malformed furigana, 0 or 4+ glosses, a headword or category
+  id defined twice, a word listed twice in one category) stop the build. Nothing is written until they're fixed.
 - **Warnings** (a category that can't be dealt) still build, but that category won't appear in the game.
 - The content version bumps automatically whenever the output changes. Always commit `docs/` together with the
-  YAML change.
-- GitHub Pages serves the new JSON within about a minute. Installed apps download it on their next launch and
-  use it from the next board they deal; a board in progress is never changed.
+  YAML change: a CI check rebuilds on every push and pull request, and fails if `docs/` doesn't match the YAML.
+- GitHub Pages serves the new JSON within about a minute. Installed apps check for it on launch and whenever
+  they come back to the foreground (at most every 10 minutes). New themes and levels show up straight away on
+  Home; a board in progress keeps its content until it ends. No app release is needed.
 - Each app release also bundles a copy of the content for offline play, so tell engineering when a big content
   drop lands and they'll refresh the snapshot.
 

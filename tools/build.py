@@ -168,12 +168,32 @@ def playability_warnings(words: list[dict], categories: list[dict], levels: list
     return warnings
 
 
+class DuplicateKey(Exception):
+    pass
+
+
+class StrictLoader(yaml.SafeLoader):
+    """SafeLoader that refuses duplicate keys, which plain YAML silently resolves by keeping the last one."""
+
+    def construct_mapping(self, node, deep=False):
+        seen = {}
+        for key_node, _ in node.value:
+            key = self.construct_object(key_node, deep=deep)
+            if key in seen:
+                raise DuplicateKey(f"{key!r} appears twice (lines {seen[key] + 1} and {key_node.start_mark.line + 1})")
+            seen[key] = key_node.start_mark.line
+        return super().construct_mapping(node, deep=deep)
+
+
 def load_yaml(name: str):
     path = CONTENT / name
     if not path.exists():
         return None
     with path.open(encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        try:
+            return yaml.load(f, Loader=StrictLoader)
+        except DuplicateKey as e:
+            raise SystemExit(f"content error: {name}: {e}")
 
 
 def build() -> int:
@@ -216,11 +236,19 @@ def build() -> int:
 
     categories = []
     cat_ids = {c["id"] for c in raw_categories}
+    seen_ids = set()
+    for c in raw_categories:
+        if c["id"] in seen_ids:
+            errors.append(f"category id {c['id']} is used twice")
+        seen_ids.add(c["id"])
     for c in raw_categories:
         cid = c["id"]
         if c.get("type") not in CATEGORY_TYPES:
             errors.append(f"category {cid}: unknown type {c.get('type')!r}")
         members = [str(m) for m in c.get("members", [])]
+        repeated = sorted({m for m in members if members.count(m) > 1})
+        if repeated:
+            errors.append(f"category {cid}: {', '.join(repeated)} listed twice")
         for m in members:
             if m not in word_ids:
                 errors.append(f"category {cid}: member {m} is not in words.yaml")
