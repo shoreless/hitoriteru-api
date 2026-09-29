@@ -9,7 +9,7 @@
   type: meaning
   label: "天[てん]気[き]"
   label_en: weather
-  rule_en: Weather words
+  rule_en: Kinds of weather
   min_level: 5
   members: [雨, 雪, 風, 晴れ, 曇り, 雲, 台風]
   excludes: [shizen]
@@ -20,10 +20,12 @@
   label_en: food
   rule_en: Things you eat
   min_level: 5
-  members: [パン, 肉, 魚, 卵, 野菜, 果物, ご飯, お菓子, 牛肉, 豚肉]
+  members: [パン, 肉, 魚, 卵, 野菜, 果物, ご飯, お菓子, 牛肉, 豚肉, 鶏肉, 朝ご飯, 晩ご飯]
   near_miss:
     牛肉: "belongs with 食べ物; it contains 牛 (cow) but it's beef"
     豚肉: "belongs with 食べ物; it contains 豚 (pig) but it's pork"
+    朝ご飯: "belongs with 食べ物; it contains 朝 (morning) but it's breakfast"
+    晩ご飯: "belongs with 食べ物; it contains 晩 (evening) but it's dinner"
 
 - id: nomimono
   type: meaning
@@ -31,7 +33,7 @@
   label_en: drinks
   rule_en: Things you drink
   min_level: 5
-  members: [水, お茶, コーヒー, 牛乳, お酒, ジュース, 紅茶]
+  members: [水, お茶, コーヒー, 牛乳, お酒, ジュース, 紅茶, ミルク]
   near_miss:
     牛乳: "belongs with 飲み物; it contains 牛 (cow) but it's something you drink"
 
@@ -41,7 +43,7 @@
   label_en: body
   rule_en: Parts of the body
   min_level: 5
-  members: [頭, 目, 耳, 口, 手, 足]
+  members: [頭, 目, 耳, 口, 手, 足, 顔, 鼻, 歯, お腹, 首, 指, 髪]
 
 - id: doubutsu
   type: meaning
@@ -49,15 +51,17 @@
   label_en: animals
   rule_en: Animals
   min_level: 5
-  members: [犬, 猫, 鳥, 馬, 牛, 豚]
+  members: [犬, 猫, 鳥, 馬, 牛, 豚, 虫]
 
 - id: kazoku
   type: meaning
   label: "家[か]族[ぞく]"
   label_en: family
-  rule_en: Family members (your own)
+  rule_en: Family members, yours or someone else's
   min_level: 5
-  members: [父, 母, 兄, 姉, 弟, 妹, 祖父, 祖母, 両親]
+  members: [父, 母, 兄, 姉, 弟, 妹, 祖父, 祖母, 両親, 兄弟, お父さん, お母さん, お兄さん, お姉さん, おじいさん, おばあさん, 赤ちゃん]
+  near_miss:
+    赤ちゃん: "belongs with 家族; it contains 赤 (red) but it's a baby"
 
 - id: norimono
   type: meaning
@@ -65,7 +69,10 @@
   label_en: vehicles
   rule_en: Ways to travel
   min_level: 5
-  members: [車, 電車, バス, 自転車, 飛行機, タクシー, 地下鉄, 船]
+  members: [車, 電車, バス, 自転車, 飛行機, タクシー, 地下鉄, 船, 自動車]
+  near_miss:
+    自動車: "belongs with 乗り物; it contains 動 (move) but it's a car"
+    飛行機: "belongs with 乗り物; it contains 飛 like 飛ぶ, but it's a plane"
 
 - id: iro
   type: meaning
@@ -83,7 +90,7 @@
   label_en: times of day
   rule_en: Parts of the day
   min_level: 5
-  members: [朝, 昼, 夕方, 晩, 夜, 午後, 午前]
+  members: [朝, 昼, 夕方, 晩, 夜, 午後, 午前, 今朝, 今晩, 夕べ, 毎朝, 毎晩]
 
 - id: den
   type: shared_kanji
@@ -99,7 +106,9 @@
   label_en: clothes
   rule_en: Things you wear
   min_level: 5
-  members: [シャツ, 靴, 帽子, 靴下, スカート, ズボン, 上着, セーター]
+  members: [シャツ, 靴, 帽子, 靴下, スカート, ズボン, 上着, セーター, ネクタイ, コート, スリッパ, 手袋]
+  near_miss:
+    手袋: "belongs with 服; it contains 手 (hand) but they're gloves"
 
 - id: machi
   type: meaning
@@ -107,7 +116,10 @@
   label_en: in town
   rule_en: Places you go to in town
   min_level: 5
-  members: [駅, 銀行, 病院, 郵便局, 公園, 図書館, 交番, 大使館]
+  members: [駅, 銀行, 病院, 郵便局, 公園, 図書館, 交番, 大使館, 喫茶店, 映画館, 本屋, 八百屋, 学校]
+  near_miss:
+    喫茶店: "belongs with 町; it contains 茶 (tea) but it's a café"
+    本屋: "belongs with 町; it contains 本 (book) but it's a shop"
 
 - id: shizen
   type: meaning
@@ -115,7 +127,7 @@
   label_en: nature
   rule_en: The natural world around you
   min_level: 5
-  members: [山, 川, 海, 空, 池, 花, 木]
+  members: [山, 川, 海, 空, 池, 花, 木, 森, 島, 石, 星]
   excludes: [tenki]
 
 - id: heya
@@ -124,15 +136,56 @@
   label_en: in a room
   rule_en: Things in a room at home
   min_level: 5
-  members: [机, 椅子, 窓, ドア, ベッド, 冷蔵庫, 本棚]
+  members: [机, 椅子, 窓, ドア, ベッド, 冷蔵庫, 本棚, テーブル, 時計, テレビ, ストーブ, 押し入れ]
+  near_miss:
+    本棚: "belongs with 部屋; it contains 本 (book) but it's the shelf"
 
 - id: bunbougu
   type: meaning
   label: "文[ぶん]房[ぼう]具[ぐ]"
-  label_en: stationery
+  label_en: writing
   rule_en: Things you write with or write on
   min_level: 5
-  members: [鉛筆, ペン, ボールペン, 万年筆, ノート, 紙]
+  members: [鉛筆, ペン, ボールペン, 万年筆, ノート, 紙, 消しゴム, 葉書, 手紙]
+  near_miss:
+    手紙: "belongs with 文房具; it contains 手 (hand) but it's a letter you write"
+
+- id: shokki
+  type: meaning
+  label: "食[しょっ]器[き]"
+  label_en: tableware
+  rule_en: What you eat or drink from, or eat with
+  min_level: 5
+  members: [皿, 箸, コップ, 茶碗, スプーン, ナイフ, フォーク, カップ]
+  near_miss:
+    茶碗: "belongs with 食器; it contains 茶 (tea) but it's a rice bowl"
+
+- id: ondo
+  type: meaning
+  label: "温[おん]度[ど]"
+  label_en: hot & cold
+  rule_en: How hot or cold something feels
+  min_level: 5
+  members: [暑い, 寒い, 暖かい, 涼しい, 熱い, 冷たい]
+  near_miss:
+    暑い: "belongs with 温度; it describes the day, but it isn't a kind of weather"
+    寒い: "belongs with 温度; it describes the day, but it isn't a kind of weather"
+
+- id: ookisa
+  type: meaning
+  label: "大[おお]きさ"
+  label_en: size
+  rule_en: How big, long, tall or wide something is
+  min_level: 5
+  members: [大きい, 小さい, 長い, 短い, 高い, 低い, 広い, 狭い, 太い, 細い, 厚い, 薄い]
+
+- id: ugoki
+  type: meaning
+  label: "動[うご]き"
+  label_en: moving
+  rule_en: Verbs for getting from place to place
+  min_level: 5
+  members: [行く, 来る, 帰る, 歩く, 走る, 泳ぐ, 飛ぶ, 登る, 渡る, 出かける]
 
 - id: shigoto
   type: meaning
@@ -308,3 +361,11 @@
   rule_en: Services and facilities in the store
   min_level: themed
   members: [ATM, コピー, 宅配便, イートイン, トイレ, ゴミ箱]
+
+- id: byouin_karada
+  type: meaning
+  label: "体[からだ]"
+  label_en: body
+  rule_en: Parts of the body
+  min_level: themed
+  members: [頭, 目, 耳, 口, 手, 足]

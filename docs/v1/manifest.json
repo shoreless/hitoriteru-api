@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 3,
+  "contentVersion": 4,
   "content": "content.json",
-  "sha256": "4e5c5753d1b79e61f8855cbafa301115a4de0a75bc7b829746f926c5f4cec286",
-  "bytes": 54082,
-  "words": 224,
-  "categories": 34,
-  "levels": 6,
+  "sha256": "15fc8dacb04a985b2e669189a410c5efac00711287811186bdb96c6f40544b1e",
+  "bytes": 73053,
+  "words": 306,
+  "categories": 39,
+  "levels": 16,
   "themes": 4,
-  "builtAt": "2026-09-29T04:18:18Z"
+  "builtAt": "2026-09-29T05:47:45Z"
 }
