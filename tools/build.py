@@ -28,12 +28,12 @@ OUT = ROOT / "docs" / "v1"
 SCHEMA_VERSION = 1
 CATEGORY_TYPES = {"meaning", "script", "shared_kanji", "counter", "reading"}
 
-# Mirrors the app's Levels (engine/Generator.kt): content level → (JLPT levels a board may use, words per category).
-# A category is only dealt when enough of its members fall in the window, so the build warns when it can't be.
-BOARD_LEVELS = {
-    5: {"word_levels": {5}, "min_words": 4},
-    4: {"word_levels": {4, 5}, "min_words": 5},
-}
+THEMED = 0  # min_level of categories used only by themes; the journey never deals them
+
+
+def band_window(band: int) -> set[int]:
+    """JLPT levels a journey band draws from (spec: Content level): N5 → {5}, N4 → {4,5}, N3 → {3,4,5}, N2 → {2,3,4}."""
+    return set(range(band, min(5, band + 2) + 1))
 
 _KANA = re.compile(r"[぀-ヿー]")
 _BRACKET = re.compile(r"\[([^\]]+)\]")
@@ -70,24 +70,101 @@ def reading_of(segments: list[dict]) -> str:
     return "".join(s.get("r", s["t"]) for s in segments)
 
 
-def playability_warnings(words: list[dict], categories: list[dict]) -> list[str]:
-    """Categories that can never be dealt at some content level the app offers."""
+def build_levels(raw: list[dict], errors: list[str]) -> list[dict]:
+    levels = []
+    previous = 0
+    for i, r in enumerate(raw):
+        where = f"levels.yaml entry {i + 1}"
+        start = r.get("from")
+        if not isinstance(start, int) or start <= previous:
+            errors.append(f"{where}: from must increase (1 first)")
+        if i == 0 and start != 1:
+            errors.append(f"{where}: the first entry must start at level 1")
+        previous = start if isinstance(start, int) else previous
+        errors.extend(f"{where}: {e}" for e in board_shape_errors(r))
+        low, high = (r.get("words_per_category") or [0, 0])
+        if not 3 <= low <= high:
+            errors.append(f"{where}: words_per_category must be [min, max] with 3 ≤ min ≤ max")
+        if r.get("band") not in (1, 2, 3, 4, 5):
+            errors.append(f"{where}: band must be 1–5")
+        if not r.get("categories", 0) > r.get("foundations", 0) >= 2:
+            errors.append(f"{where}: needs 2+ foundations and more categories than foundations")
+        levels.append({
+            "from": start, "band": r.get("band"), "categories": r.get("categories"),
+            "foundations": r.get("foundations"), "columns": r.get("columns"),
+            "wordsMin": low, "wordsMax": high, "slack": r.get("slack"),
+        })
+    return levels
+
+
+def build_themes(raw: list[dict], categories: dict, errors: list[str]) -> list[dict]:
+    themes = []
+    seen = set()
+    for t in raw:
+        tid = t.get("id")
+        where = f"theme {tid}"
+        if not tid or tid in seen:
+            errors.append(f"{where}: needs a unique id")
+        seen.add(tid)
+        chosen = t.get("categories") or []
+        for cid in chosen:
+            if cid not in categories:
+                errors.append(f"{where}: unknown category {cid}")
+        if not 3 <= len(chosen) <= 5:
+            errors.append(f"{where}: needs 3–5 categories")
+        if not len(chosen) > t.get("foundations", 0) >= 2:
+            errors.append(f"{where}: needs 2+ foundations and more categories than foundations")
+        errors.extend(f"{where}: {e}" for e in board_shape_errors(t))
+        known = [categories[c] for c in chosen if c in categories]
+        for c in known:
+            for other in known:
+                if other["id"] in c["excludes"]:
+                    errors.append(f"{where}: {c['id']} excludes {other['id']}")
+            usable = [m for m in c["members"] if not any(m in o["members"] for o in known if o is not c)]
+            if len(usable) < 3:
+                errors.append(f"{where}: {c['id']} keeps only {len(usable)} words once shared words are removed")
+        title = parse_furigana(t.get("title", ""))
+        themes.append({
+            "id": tid, "title": plain(title), "titleFurigana": title,
+            "titleEn": t.get("title_en", ""), "blurbEn": t.get("blurb_en", ""),
+            "categories": chosen, "foundations": t.get("foundations"), "columns": t.get("columns"),
+            "slack": t.get("slack"), "daily": bool(t.get("daily", False)),
+        })
+    return themes
+
+
+def board_shape_errors(r: dict) -> list[str]:
+    errors = []
+    columns = r.get("columns")
+    if not isinstance(columns, list) or not 3 <= len(columns) <= 5 or not all(isinstance(c, int) and c >= 1 for c in columns):
+        errors.append("columns must list 3–5 column depths, each 1 or more")
+    slack = r.get("slack")
+    if not isinstance(slack, (int, float)) or not 1.2 <= slack <= 3.0:
+        errors.append("slack must be between 1.2 and 3.0")
+    return errors
+
+
+def playability_warnings(words: list[dict], categories: list[dict], levels: list[dict]) -> list[str]:
+    """Journey categories that can never be dealt at a band levels.yaml uses."""
     level_of = {w["id"]: w["jlpt"] for w in words}
+    bands = {}
+    for lv in levels:
+        bands[lv["band"]] = max(bands.get(lv["band"], 0), lv["wordsMin"])
     warnings = []
     for c in categories:
-        playable = []
-        for level, rule in BOARD_LEVELS.items():
-            if c["minLevel"] < level:
+        if c["minLevel"] == THEMED:
+            continue
+        playable = False
+        for band, needed in sorted(bands.items(), reverse=True):
+            if c["minLevel"] < band:
                 continue  # category not allowed this easy
-            usable = [m for m in c["members"] if level_of[m] in rule["word_levels"]]
-            if len(usable) >= rule["min_words"]:
-                playable.append(f"N{level}")
+            usable = [m for m in c["members"] if level_of[m] in band_window(band)]
+            if len(usable) >= needed:
+                playable = True
             else:
-                warnings.append(
-                    f"{c['id']} can't be dealt at N{level}: {len(usable)} members in range, needs {rule['min_words']}"
-                )
+                warnings.append(f"{c['id']} can't be dealt at N{band}: {len(usable)} members in range, needs {needed}")
         if not playable:
-            warnings.append(f"{c['id']} never appears on any board yet")
+            warnings.append(f"{c['id']} never appears on a journey board yet")
     return warnings
 
 
@@ -122,8 +199,8 @@ def build() -> int:
         if not 1 <= len(glosses) <= 3:
             errors.append(f"{headword}: needs 1–3 glosses")
         jlpt = w.get("jlpt")
-        if jlpt not in (1, 2, 3, 4, 5):
-            errors.append(f"{headword}: jlpt must be 1–5")
+        if jlpt not in (0, 1, 2, 3, 4, 5):
+            errors.append(f"{headword}: jlpt must be 1–5, or 0 when not tagged")
         romaji = overrides.get(headword) or to_romaji(reading)
         words.append({
             "id": headword,
@@ -156,6 +233,11 @@ def build() -> int:
                 errors.append(f"category {cid}: near_miss word {k} is not a member")
         if len(members) < 4:
             errors.append(f"category {cid}: needs at least 4 members")
+        min_level = c.get("min_level")
+        if min_level == "themed":
+            min_level = THEMED
+        elif min_level not in (1, 2, 3, 4, 5):
+            errors.append(f"category {cid}: min_level must be 1–5 or themed")
         label_segs = parse_furigana(c["label"])
         categories.append({
             "id": cid,
@@ -164,20 +246,23 @@ def build() -> int:
             "labelFurigana": label_segs,
             "labelEn": c["label_en"],
             "ruleEn": c["rule_en"],
-            "minLevel": c["min_level"],
+            "minLevel": min_level,
             "members": members,
             "excludes": c.get("excludes", []),
             "nearMiss": near_miss,
         })
 
+    levels = build_levels(load_yaml("levels.yaml") or [], errors)
+    themes = build_themes(load_yaml("themes.yaml") or [], {c["id"]: c for c in categories}, errors)
+
     if errors:
         print("content errors:", *errors, sep="\n  ")
         return 1
 
-    for warning in playability_warnings(words, categories):
+    for warning in playability_warnings(words, categories, levels):
         print("warning:", warning)
 
-    content = {"schemaVersion": SCHEMA_VERSION, "words": words, "categories": categories}
+    content = {"schemaVersion": SCHEMA_VERSION, "words": words, "categories": categories, "levels": levels, "themes": themes}
     body = json.dumps(content, ensure_ascii=False, separators=(",", ":"), sort_keys=True).encode("utf-8")
     digest = hashlib.sha256(body).hexdigest()
 
@@ -195,12 +280,15 @@ def build() -> int:
         "bytes": len(body),
         "words": len(words),
         "categories": len(categories),
+        "levels": len(levels),
+        "themes": len(themes),
         "builtAt": previous.get("builtAt") if previous.get("sha256") == digest
         else datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
     (OUT / "content.json").write_bytes(body)
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
-    print(f"content v{version}: {len(words)} words, {len(categories)} categories, {len(body):,} bytes")
+    print(f"content v{version}: {len(words)} words, {len(categories)} categories, {len(levels)} level ranges, "
+          f"{len(themes)} themes, {len(body):,} bytes")
     return 0
 
 

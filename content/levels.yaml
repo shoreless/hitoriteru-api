@@ -1,0 +1,57 @@
+# Journey levels. Each entry applies from level `from` until the next entry; the last entry repeats forever.
+# Every attempt reshuffles, so a level is a difficulty setting, not one fixed deal.
+#
+#   band:               JLPT band the level draws from: 5 = N5 words only, 4 = N5–N4, 3 = N5–N3, 2 = N4–N2, 1 = N3–N1
+#   categories:         categories dealt
+#   foundations:        foundation slots (keep below categories so players must finish one to start another)
+#   columns:            cards dealt into each tableau column; the rest go to the draw pile
+#   words_per_category: [min, max] word cards per category
+#   slack:              move limit = solver's solution × slack (2.4 relaxed … 1.4 tight)
+
+- from: 1
+  band: 5
+  categories: 3
+  foundations: 2
+  columns: [2, 3, 4, 5]
+  words_per_category: [4, 4]
+  slack: 2.4
+
+- from: 6
+  band: 5
+  categories: 4
+  foundations: 3
+  columns: [2, 3, 4, 5]
+  words_per_category: [4, 4]
+  slack: 2.2
+
+- from: 16
+  band: 5
+  categories: 4
+  foundations: 3
+  columns: [2, 3, 4, 5]
+  words_per_category: [4, 5]
+  slack: 2.0
+
+- from: 31
+  band: 5
+  categories: 4
+  foundations: 3
+  columns: [2, 3, 4, 5]
+  words_per_category: [5, 5]
+  slack: 1.8
+
+- from: 41
+  band: 4
+  categories: 5
+  foundations: 4
+  columns: [2, 3, 4, 5, 6]
+  words_per_category: [5, 6]
+  slack: 1.8
+
+- from: 61
+  band: 4
+  categories: 5
+  foundations: 4
+  columns: [2, 3, 4, 5, 6]
+  words_per_category: [5, 6]
+  slack: 1.6

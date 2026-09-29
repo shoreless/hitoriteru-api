@@ -86,3 +86,79 @@
   rule_en: Words containing the kanji 電, meaning electricity
   min_level: 4
   members: [電車, 電話, 電気, 電池, 停電, 電子レンジ]
+
+# ---------------------------------------------------------------------------
+# Themed categories: min_level "themed" keeps them out of journey boards; themes.yaml picks them.
+# ---------------------------------------------------------------------------
+
+- id: uketsuke
+  type: meaning
+  label: "受[うけ]付[つけ]"
+  label_en: reception
+  rule_en: Things at a clinic's front desk
+  min_level: themed
+  members: [保険証, 診察券, 予約, 初診, 問診票, 待合室]
+
+- id: shoujou
+  type: meaning
+  label: "症[しょう]状[じょう]"
+  label_en: symptoms
+  rule_en: What you tell the doctor is wrong
+  min_level: themed
+  members: [熱, 咳, 頭痛, 鼻水, 吐き気, 寒気]
+  near_miss:
+    頭痛: "belongs with 症状; it contains 頭 (head) but it's a symptom: headache"
+
+- id: shinsatsu
+  type: meaning
+  label: "診[しん]察[さつ]"
+  label_en: the exam
+  rule_en: What happens in the examination room
+  min_level: themed
+  members: [注射, 検査, 血圧, 体温, 点滴, レントゲン]
+  near_miss:
+    体温: "belongs with 診察; it contains 体 (body) but it's taking your temperature"
+
+- id: yakkyoku
+  type: meaning
+  label: "薬[やっ]局[きょく]"
+  label_en: pharmacy
+  rule_en: What you pick up at the pharmacy
+  min_level: themed
+  members: [処方箋, 錠剤, 目薬, 塗り薬, 痛み止め, 風邪薬]
+  near_miss:
+    目薬: "belongs with 薬局; it contains 目 (eye) but it's medicine: eye drops"
+
+- id: janru
+  type: meaning
+  label: "ジャンル"
+  label_en: genres
+  rule_en: Kinds of film
+  min_level: themed
+  members: [アクション, コメディ, ホラー, アニメ, 恋愛, 時代劇]
+  near_miss:
+    ホラー: "belongs with ジャンル; it's a kind of film (怖い is how it feels)"
+
+- id: eigakan
+  type: meaning
+  label: "映[えい]画[が]館[かん]"
+  label_en: the cinema
+  rule_en: Things you find at the cinema
+  min_level: themed
+  members: [チケット, 座席, 売店, ポップコーン, 予告編, 字幕]
+
+- id: eiga_hito
+  type: meaning
+  label: "人[ひと]"
+  label_en: people
+  rule_en: People in and behind a film
+  min_level: themed
+  members: [俳優, 女優, 監督, 主人公, 悪役, 声優]
+
+- id: kansou
+  type: meaning
+  label: "感[かん]想[そう]"
+  label_en: reactions
+  rule_en: What you say after the film
+  min_level: themed
+  members: [面白い, 怖い, 感動, つまらない, 泣ける, 最高]

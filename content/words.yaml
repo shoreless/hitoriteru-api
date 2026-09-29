@@ -84,3 +84,71 @@
 電池:   { furigana: "電[でん]池[ち]", pos: noun, glosses: [battery], jlpt: 3 }
 停電:   { furigana: "停[てい]電[でん]", pos: noun, glosses: [power outage], jlpt: 2 }
 電子レンジ: { furigana: "電[でん]子[し]レンジ", pos: noun, glosses: [microwave oven], jlpt: 3 }
+
+# ---------------------------------------------------------------------------
+# Themed words. jlpt: 0 = not tagged yet (not on the JLPT list, or level unverified).
+# ---------------------------------------------------------------------------
+
+# 病院に行く · going to the doctor — 受付 reception
+保険証: { furigana: "保[ほ]険[けん]証[しょう]", pos: noun, glosses: [health insurance card], jlpt: 0 }
+診察券: { furigana: "診[しん]察[さつ]券[けん]", pos: noun, glosses: [patient registration card], jlpt: 0 }
+予約:   { furigana: "予[よ]約[やく]", pos: noun, glosses: [appointment, reservation], jlpt: 0 }
+初診:   { furigana: "初[しょ]診[しん]", pos: noun, glosses: [first visit (to a clinic)], jlpt: 0 }
+問診票: { furigana: "問[もん]診[しん]票[ひょう]", pos: noun, glosses: [medical questionnaire], jlpt: 0 }
+待合室: { furigana: "待[まち]合[あい]室[しつ]", pos: noun, glosses: [waiting room], jlpt: 0 }
+
+# 症状 symptoms
+熱:     { furigana: "熱[ねつ]", pos: noun, glosses: [fever, temperature], jlpt: 0 }
+咳:     { furigana: "咳[せき]", pos: noun, glosses: [cough], jlpt: 0 }
+頭痛:   { furigana: "頭[ず]痛[つう]", pos: noun, glosses: [headache], jlpt: 0 }
+鼻水:   { furigana: "鼻[はな]水[みず]", pos: noun, glosses: [runny nose], jlpt: 0 }
+吐き気: { furigana: "吐[は]き気[け]", pos: noun, glosses: [nausea], jlpt: 0 }
+寒気:   { furigana: "寒[さむ]気[け]", pos: noun, glosses: [chills], jlpt: 0 }
+
+# 診察 the examination
+注射:     { furigana: "注[ちゅう]射[しゃ]", pos: noun, glosses: [injection, shot], jlpt: 0 }
+検査:     { furigana: "検[けん]査[さ]", pos: noun, glosses: [test, examination], jlpt: 0 }
+血圧:     { furigana: "血[けつ]圧[あつ]", pos: noun, glosses: [blood pressure], jlpt: 0 }
+体温:     { furigana: "体[たい]温[おん]", pos: noun, glosses: [body temperature], jlpt: 0 }
+点滴:     { furigana: "点[てん]滴[てき]", pos: noun, glosses: [IV drip], jlpt: 0 }
+レントゲン: { reading: レントゲン, pos: noun, glosses: [X-ray], jlpt: 0 }
+
+# 薬局 pharmacy
+処方箋:   { furigana: "処[しょ]方[ほう]箋[せん]", pos: noun, glosses: [prescription], jlpt: 0 }
+錠剤:     { furigana: "錠[じょう]剤[ざい]", pos: noun, glosses: [tablet, pill], jlpt: 0 }
+目薬:     { furigana: "目[め]薬[ぐすり]", pos: noun, glosses: [eye drops], jlpt: 0 }
+塗り薬:   { furigana: "塗[ぬ]り薬[ぐすり]", pos: noun, glosses: [ointment, cream], jlpt: 0 }
+痛み止め: { furigana: "痛[いた]み止[ど]め", pos: noun, glosses: [painkiller], jlpt: 0 }
+風邪薬:   { furigana: "風邪[かぜ]薬[ぐすり]", pos: noun, glosses: [cold medicine], jlpt: 0 }
+
+# 映画を見る · watching a movie — ジャンル genres
+アクション: { reading: アクション, pos: noun, glosses: [action], jlpt: 0 }
+コメディ:   { reading: コメディ, pos: noun, glosses: [comedy], jlpt: 0 }
+ホラー:     { reading: ホラー, pos: noun, glosses: [horror], jlpt: 0 }
+アニメ:     { reading: アニメ, pos: noun, glosses: [anime, animation], jlpt: 0 }
+恋愛:       { furigana: "恋[れん]愛[あい]", pos: noun, glosses: [romance, love], jlpt: 0 }
+時代劇:     { furigana: "時[じ]代[だい]劇[げき]", pos: noun, glosses: [period drama, samurai drama], jlpt: 0 }
+
+# 映画館 at the cinema
+チケット:   { reading: チケット, pos: noun, glosses: [ticket], jlpt: 0 }
+座席:       { furigana: "座[ざ]席[せき]", pos: noun, glosses: [seat], jlpt: 0 }
+売店:       { furigana: "売[ばい]店[てん]", pos: noun, glosses: [kiosk, snack stand], jlpt: 0 }
+ポップコーン: { reading: ポップコーン, pos: noun, glosses: [popcorn], jlpt: 0 }
+予告編:     { furigana: "予[よ]告[こく]編[へん]", pos: noun, glosses: [trailer, preview], jlpt: 0 }
+字幕:       { furigana: "字[じ]幕[まく]", pos: noun, glosses: [subtitles], jlpt: 0 }
+
+# 人 people in and behind a film
+俳優:   { furigana: "俳[はい]優[ゆう]", pos: noun, glosses: [actor], jlpt: 0 }
+女優:   { furigana: "女[じょ]優[ゆう]", pos: noun, glosses: [actress], jlpt: 0 }
+監督:   { furigana: "監[かん]督[とく]", pos: noun, glosses: [director], jlpt: 0 }
+主人公: { furigana: "主[しゅ]人[じん]公[こう]", pos: noun, glosses: [protagonist, main character], jlpt: 0 }
+悪役:   { furigana: "悪[あく]役[やく]", pos: noun, glosses: [villain], jlpt: 0 }
+声優:   { furigana: "声[せい]優[ゆう]", pos: noun, glosses: [voice actor], jlpt: 0 }
+
+# 感想 reactions
+面白い:     { furigana: "面[おも]白[しろ]い", pos: i-adjective, glosses: [interesting, fun], jlpt: 5 }
+怖い:       { furigana: "怖[こわ]い", pos: i-adjective, glosses: [scary], jlpt: 0 }
+感動:       { furigana: "感[かん]動[どう]", pos: noun, glosses: [being deeply moved], jlpt: 0 }
+つまらない: { reading: つまらない, pos: i-adjective, glosses: [boring, dull], jlpt: 0 }
+泣ける:     { furigana: "泣[な]ける", pos: verb, glosses: [makes you cry, tear-jerking], jlpt: 0 }
+最高:       { furigana: "最[さい]高[こう]", pos: noun, glosses: [the best, amazing], jlpt: 0 }

@@ -1,10 +1,12 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 1,
+  "contentVersion": 2,
   "content": "content.json",
-  "sha256": "11dc51c9b16693562a6fac5f112aa9e8cf3625248faab2e9d79a187f811d3c20",
-  "bytes": 12325,
-  "words": 59,
-  "categories": 10,
-  "builtAt": "2026-09-29T01:49:58Z"
+  "sha256": "5fd02c19d23677b7bd59ab405912e0cf22965b65789b1473662f120761015b43",
+  "bytes": 25969,
+  "words": 107,
+  "categories": 18,
+  "levels": 6,
+  "themes": 2,
+  "builtAt": "2026-09-29T03:14:38Z"
 }

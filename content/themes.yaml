@@ -1,0 +1,32 @@
+# Themed levels: a fixed set of categories from categories.yaml, every member word dealt, reshuffled on each play.
+# Themes marked daily: true can also be picked for the daily challenge.
+#
+#   id:           short, lower case, never changed once published
+#   title:        Japanese title with furigana brackets
+#   title_en:     English title shown on the theme card
+#   blurb_en:     one line under the title
+#   categories:   3–5 category ids (themed or journey categories — reuse is fine)
+#   foundations:  foundation slots (fewer than categories, so players must finish one to start another)
+#   columns:      cards dealt into each tableau column, left to right; the rest go to the draw pile
+#   slack:        move limit = solver's solution × slack (2.0 relaxed … 1.4 tight)
+#   daily:        true to include in the daily challenge rotation
+
+- id: byouin
+  title: "病[びょう]院[いん]に行[い]く"
+  title_en: Going to the doctor
+  blurb_en: The front desk, your symptoms, the exam and the pharmacy.
+  categories: [uketsuke, shoujou, shinsatsu, yakkyoku, karada]
+  foundations: 4
+  columns: [2, 3, 4, 5, 6]
+  slack: 2.0
+  daily: true
+
+- id: eiga
+  title: "映[えい]画[が]を見[み]る"
+  title_en: Watching a movie
+  blurb_en: Genres, the cinema, the people on screen and what you thought.
+  categories: [janru, eigakan, eiga_hito, kansou]
+  foundations: 3
+  columns: [2, 3, 4, 5]
+  slack: 2.0
+  daily: true
