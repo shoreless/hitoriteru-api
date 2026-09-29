@@ -15,7 +15,7 @@
   title: "病[びょう]院[いん]に行[い]く"
   title_en: Going to the doctor
   blurb_en: The front desk, your symptoms, the exam and the pharmacy.
-  categories: [uketsuke, shoujou, shinsatsu, yakkyoku, karada]
+  categories: [uketsuke, shoujou, shinsatsu, yakkyoku, byouin_karada]
   foundations: 4
   columns: [2, 3, 4, 5, 6]
   slack: 2.0
