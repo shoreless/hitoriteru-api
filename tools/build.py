@@ -28,6 +28,13 @@ OUT = ROOT / "docs" / "v1"
 SCHEMA_VERSION = 1
 CATEGORY_TYPES = {"meaning", "script", "shared_kanji", "counter", "reading"}
 
+# Mirrors the app's Levels (engine/Generator.kt): content level → (JLPT levels a board may use, words per category).
+# A category is only dealt when enough of its members fall in the window, so the build warns when it can't be.
+BOARD_LEVELS = {
+    5: {"word_levels": {5}, "min_words": 4},
+    4: {"word_levels": {4, 5}, "min_words": 5},
+}
+
 _KANA = re.compile(r"[぀-ヿー]")
 _BRACKET = re.compile(r"\[([^\]]+)\]")
 
@@ -61,6 +68,27 @@ def plain(segments: list[dict]) -> str:
 
 def reading_of(segments: list[dict]) -> str:
     return "".join(s.get("r", s["t"]) for s in segments)
+
+
+def playability_warnings(words: list[dict], categories: list[dict]) -> list[str]:
+    """Categories that can never be dealt at some content level the app offers."""
+    level_of = {w["id"]: w["jlpt"] for w in words}
+    warnings = []
+    for c in categories:
+        playable = []
+        for level, rule in BOARD_LEVELS.items():
+            if c["minLevel"] < level:
+                continue  # category not allowed this easy
+            usable = [m for m in c["members"] if level_of[m] in rule["word_levels"]]
+            if len(usable) >= rule["min_words"]:
+                playable.append(f"N{level}")
+            else:
+                warnings.append(
+                    f"{c['id']} can't be dealt at N{level}: {len(usable)} members in range, needs {rule['min_words']}"
+                )
+        if not playable:
+            warnings.append(f"{c['id']} never appears on any board yet")
+    return warnings
 
 
 def load_yaml(name: str):
@@ -145,6 +173,9 @@ def build() -> int:
     if errors:
         print("content errors:", *errors, sep="\n  ")
         return 1
+
+    for warning in playability_warnings(words, categories):
+        print("warning:", warning)
 
     content = {"schemaVersion": SCHEMA_VERSION, "words": words, "categories": categories}
     body = json.dumps(content, ensure_ascii=False, separators=(",", ":"), sort_keys=True).encode("utf-8")

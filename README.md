@@ -2,6 +2,8 @@
 
 Content for the Hitoriteru Android app, served as static JSON from GitHub Pages.
 
+**Writing content? Start with [CONTENT_GUIDE.md](CONTENT_GUIDE.md).**
+
 ## Layout
 
 | Path | What |
