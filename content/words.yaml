@@ -13,6 +13,7 @@
 晴れ: { furigana: "晴[は]れ", pos: noun, glosses: [clear weather, sunny], jlpt: 5 }
 曇り: { furigana: "曇[くも]り", pos: noun, glosses: [cloudy weather], jlpt: 5 }
 雲:   { furigana: "雲[くも]", pos: noun, glosses: [cloud], jlpt: 5 }
+台風: { furigana: "台[たい]風[ふう]", pos: noun, glosses: [typhoon], jlpt: 4 }
 
 # 食べ物 · food
 パン: { reading: パン, pos: noun, glosses: [bread], jlpt: 5 }
@@ -21,6 +22,10 @@
 卵:   { furigana: "卵[たまご]", pos: noun, glosses: [egg], jlpt: 5 }
 野菜: { furigana: "野[や]菜[さい]", pos: noun, glosses: [vegetable], jlpt: 5 }
 果物: { furigana: "果物[くだもの]", pos: noun, glosses: [fruit], jlpt: 5 }
+ご飯: { furigana: "ご飯[はん]", pos: noun, glosses: [cooked rice, meal], jlpt: 5 }
+お菓子: { furigana: "お菓[か]子[し]", pos: noun, glosses: [sweets, snacks], jlpt: 5 }
+牛肉: { furigana: "牛[ぎゅう]肉[にく]", pos: noun, glosses: [beef], jlpt: 5 }
+豚肉: { furigana: "豚[ぶた]肉[にく]", pos: noun, glosses: [pork], jlpt: 5 }
 
 # 飲み物 · drinks
 水:     { furigana: "水[みず]", pos: noun, glosses: [water], jlpt: 5 }
@@ -29,6 +34,7 @@
 牛乳:   { furigana: "牛[ぎゅう]乳[にゅう]", pos: noun, glosses: [milk], jlpt: 5 }
 お酒:   { furigana: "お酒[さけ]", pos: noun, glosses: [alcohol, sake], jlpt: 5 }
 ジュース: { reading: ジュース, pos: noun, glosses: [juice], jlpt: 5 }
+紅茶:   { furigana: "紅[こう]茶[ちゃ]", pos: noun, glosses: [black tea], jlpt: 5 }
 
 # 体 · body
 頭: { furigana: "頭[あたま]", pos: noun, glosses: [head], jlpt: 5 }
@@ -53,6 +59,9 @@
 姉: { furigana: "姉[あね]", pos: noun, glosses: [(my) older sister], jlpt: 5 }
 弟: { furigana: "弟[おとうと]", pos: noun, glosses: [younger brother], jlpt: 5 }
 妹: { furigana: "妹[いもうと]", pos: noun, glosses: [younger sister], jlpt: 5 }
+祖父: { furigana: "祖[そ]父[ふ]", pos: noun, glosses: [(my) grandfather], jlpt: 4 }
+祖母: { furigana: "祖[そ]母[ぼ]", pos: noun, glosses: [(my) grandmother], jlpt: 4 }
+両親: { furigana: "両[りょう]親[しん]", pos: noun, glosses: [(my) parents], jlpt: 4 }
 
 # 乗り物 · vehicles
 車:     { furigana: "車[くるま]", pos: noun, glosses: [car], jlpt: 5 }
@@ -61,6 +70,8 @@
 自転車: { furigana: "自[じ]転[てん]車[しゃ]", pos: noun, glosses: [bicycle], jlpt: 5 }
 飛行機: { furigana: "飛[ひ]行[こう]機[き]", pos: noun, glosses: [aeroplane], jlpt: 5 }
 タクシー: { reading: タクシー, pos: noun, glosses: [taxi], jlpt: 5 }
+地下鉄: { furigana: "地[ち]下[か]鉄[てつ]", pos: noun, glosses: [subway, underground railway], jlpt: 5 }
+船:     { furigana: "船[ふね]", pos: noun, glosses: [ship, boat], jlpt: 4 }
 
 # 色 · colours
 赤:   { furigana: "赤[あか]", pos: noun, glosses: [red], jlpt: 5 }
@@ -69,6 +80,7 @@
 黒:   { furigana: "黒[くろ]", pos: noun, glosses: [black], jlpt: 5 }
 黄色: { furigana: "黄色[きいろ]", pos: noun, glosses: [yellow], jlpt: 5 }
 茶色: { furigana: "茶[ちゃ]色[いろ]", pos: noun, glosses: [brown], jlpt: 5 }
+緑:   { furigana: "緑[みどり]", pos: noun, glosses: [green], jlpt: 4 }
 
 # 一日 · times of day
 朝:   { furigana: "朝[あさ]", pos: noun, glosses: [morning], jlpt: 5 }
@@ -77,6 +89,7 @@
 晩:   { furigana: "晩[ばん]", pos: noun, glosses: [evening, night], jlpt: 5 }
 夜:   { furigana: "夜[よる]", pos: noun, glosses: [night], jlpt: 5 }
 午後: { furigana: "午[ご]後[ご]", pos: noun, glosses: [afternoon, p.m.], jlpt: 5 }
+午前: { furigana: "午[ご]前[ぜん]", pos: noun, glosses: [morning, a.m.], jlpt: 5 }
 
 # 電 · shared kanji (N4+)
 電話:   { furigana: "電[でん]話[わ]", pos: noun, glosses: [telephone, phone call], jlpt: 5 }
@@ -84,6 +97,88 @@
 電池:   { furigana: "電[でん]池[ち]", pos: noun, glosses: [battery], jlpt: 3 }
 停電:   { furigana: "停[てい]電[でん]", pos: noun, glosses: [power outage], jlpt: 2 }
 電子レンジ: { furigana: "電[でん]子[し]レンジ", pos: noun, glosses: [microwave oven], jlpt: 3 }
+電灯:   { furigana: "電[でん]灯[とう]", pos: noun, glosses: [electric light, lamp], jlpt: 4 }
+電報:   { furigana: "電[でん]報[ぽう]", pos: noun, glosses: [telegram], jlpt: 4 }
+
+# 服 · clothes
+シャツ:   { reading: シャツ, pos: noun, glosses: [shirt], jlpt: 5 }
+靴:       { furigana: "靴[くつ]", pos: noun, glosses: [shoes], jlpt: 5 }
+帽子:     { furigana: "帽[ぼう]子[し]", pos: noun, glosses: [hat, cap], jlpt: 5 }
+靴下:     { furigana: "靴[くつ]下[した]", pos: noun, glosses: [socks], jlpt: 5 }
+スカート: { reading: スカート, pos: noun, glosses: [skirt], jlpt: 5 }
+ズボン:   { reading: ズボン, pos: noun, glosses: [trousers], jlpt: 5 }
+上着:     { furigana: "上[うわ]着[ぎ]", pos: noun, glosses: [jacket, coat], jlpt: 5 }
+セーター: { reading: セーター, pos: noun, glosses: [sweater, jumper], jlpt: 5 }
+
+# 町 · places in town
+駅:     { furigana: "駅[えき]", pos: noun, glosses: [station], jlpt: 5 }
+銀行:   { furigana: "銀[ぎん]行[こう]", pos: noun, glosses: [bank], jlpt: 5 }
+病院:   { furigana: "病[びょう]院[いん]", pos: noun, glosses: [hospital, clinic], jlpt: 5 }
+郵便局: { furigana: "郵[ゆう]便[びん]局[きょく]", pos: noun, glosses: [post office], jlpt: 5 }
+公園:   { furigana: "公[こう]園[えん]", pos: noun, glosses: [park], jlpt: 5 }
+図書館: { furigana: "図[と]書[しょ]館[かん]", pos: noun, glosses: [library], jlpt: 5 }
+交番:   { furigana: "交[こう]番[ばん]", pos: noun, glosses: [police box], jlpt: 5 }
+大使館: { furigana: "大[たい]使[し]館[かん]", pos: noun, glosses: [embassy], jlpt: 5 }
+
+# 自然 · nature
+山: { furigana: "山[やま]", pos: noun, glosses: [mountain], jlpt: 5 }
+川: { furigana: "川[かわ]", pos: noun, glosses: [river], jlpt: 5 }
+海: { furigana: "海[うみ]", pos: noun, glosses: [sea, ocean], jlpt: 5 }
+空: { furigana: "空[そら]", pos: noun, glosses: [sky], jlpt: 5 }
+池: { furigana: "池[いけ]", pos: noun, glosses: [pond], jlpt: 5 }
+花: { furigana: "花[はな]", pos: noun, glosses: [flower], jlpt: 5 }
+木: { furigana: "木[き]", pos: noun, glosses: [tree, wood], jlpt: 5 }
+
+# 部屋 · in a room
+机:     { furigana: "机[つくえ]", pos: noun, glosses: [desk], jlpt: 5 }
+椅子:   { furigana: "椅[い]子[す]", pos: noun, glosses: [chair], jlpt: 5 }
+窓:     { furigana: "窓[まど]", pos: noun, glosses: [window], jlpt: 5 }
+ドア:   { reading: ドア, pos: noun, glosses: [door], jlpt: 5 }
+ベッド: { reading: ベッド, pos: noun, glosses: [bed], jlpt: 5 }
+冷蔵庫: { furigana: "冷[れい]蔵[ぞう]庫[こ]", pos: noun, glosses: [refrigerator, fridge], jlpt: 5 }
+本棚:   { furigana: "本[ほん]棚[だな]", pos: noun, glosses: [bookshelf], jlpt: 5 }
+
+# 文房具 · stationery
+鉛筆:       { furigana: "鉛[えん]筆[ぴつ]", pos: noun, glosses: [pencil], jlpt: 5 }
+ペン:       { reading: ペン, pos: noun, glosses: [pen], jlpt: 5 }
+ボールペン: { reading: ボールペン, pos: noun, glosses: [ballpoint pen], jlpt: 5 }
+万年筆:     { furigana: "万[まん]年[ねん]筆[ひつ]", pos: noun, glosses: [fountain pen], jlpt: 5 }
+ノート:     { reading: ノート, pos: noun, glosses: [notebook], jlpt: 5 }
+紙:         { furigana: "紙[かみ]", pos: noun, glosses: [paper], jlpt: 5 }
+
+# 仕事 · jobs (N4+)
+医者:   { furigana: "医[い]者[しゃ]", pos: noun, glosses: [doctor], jlpt: 5 }
+先生:   { furigana: "先[せん]生[せい]", pos: noun, glosses: [teacher], jlpt: 5 }
+警官:   { furigana: "警[けい]官[かん]", pos: noun, glosses: [police officer], jlpt: 5 }
+歌手:   { furigana: "歌[か]手[しゅ]", pos: noun, glosses: [singer], jlpt: 4 }
+運転手: { furigana: "運[うん]転[てん]手[しゅ]", pos: noun, glosses: [driver], jlpt: 4 }
+店員:   { furigana: "店[てん]員[いん]", pos: noun, glosses: [shop assistant, clerk], jlpt: 4 }
+
+# 感情 · feelings (N4+)
+嬉しい:     { furigana: "嬉[うれ]しい", pos: i-adjective, glosses: [happy, glad], jlpt: 4 }
+悲しい:     { furigana: "悲[かな]しい", pos: i-adjective, glosses: [sad], jlpt: 4 }
+寂しい:     { furigana: "寂[さび]しい", pos: i-adjective, glosses: [lonely], jlpt: 4 }
+楽しい:     { furigana: "楽[たの]しい", pos: i-adjective, glosses: [enjoyable, fun], jlpt: 5 }
+恥ずかしい: { furigana: "恥[は]ずかしい", pos: i-adjective, glosses: [embarrassed, shy], jlpt: 4 }
+心配:       { furigana: "心[しん]配[ぱい]", pos: noun, glosses: [worry, concern], jlpt: 4 }
+
+# 学 · shared kanji (N4+)
+学校:   { furigana: "学[がっ]校[こう]", pos: noun, glosses: [school], jlpt: 5 }
+大学:   { furigana: "大[だい]学[がく]", pos: noun, glosses: [university], jlpt: 5 }
+学生:   { furigana: "学[がく]生[せい]", pos: noun, glosses: [student], jlpt: 5 }
+留学生: { furigana: "留[りゅう]学[がく]生[せい]", pos: noun, glosses: [international student], jlpt: 5 }
+数学:   { furigana: "数[すう]学[がく]", pos: noun, glosses: [mathematics], jlpt: 4 }
+科学:   { furigana: "科[か]学[がく]", pos: noun, glosses: [science], jlpt: 4 }
+医学:   { furigana: "医[い]学[がく]", pos: noun, glosses: [medicine (the subject)], jlpt: 4 }
+文学:   { furigana: "文[ぶん]学[がく]", pos: noun, glosses: [literature], jlpt: 4 }
+
+# 気 · shared kanji (N4+)
+天気:   { furigana: "天[てん]気[き]", pos: noun, glosses: [weather], jlpt: 5 }
+元気:   { furigana: "元[げん]気[き]", pos: na-adjective, glosses: [well, healthy, lively], jlpt: 5 }
+病気:   { furigana: "病[びょう]気[き]", pos: noun, glosses: [illness], jlpt: 5 }
+空気:   { furigana: "空[くう]気[き]", pos: noun, glosses: [air], jlpt: 4 }
+気持ち: { furigana: "気[き]持[も]ち", pos: noun, glosses: [feeling, mood], jlpt: 4 }
+人気:   { furigana: "人[にん]気[き]", pos: noun, glosses: [popularity], jlpt: 4 }
 
 # ---------------------------------------------------------------------------
 # Themed words. jlpt: 0 = not tagged yet (not on the JLPT list, or level unverified).
@@ -152,3 +247,57 @@
 つまらない: { reading: つまらない, pos: i-adjective, glosses: [boring, dull], jlpt: 0 }
 泣ける:     { furigana: "泣[な]ける", pos: verb, glosses: [makes you cry, tear-jerking], jlpt: 0 }
 最高:       { furigana: "最[さい]高[こう]", pos: noun, glosses: [the best, amazing], jlpt: 0 }
+
+# 電車に乗る · taking the train — 駅 the station
+改札:     { furigana: "改[かい]札[さつ]", pos: noun, glosses: [ticket gate], jlpt: 0 }
+ホーム:   { reading: ホーム, pos: noun, glosses: [platform], jlpt: 0 }
+券売機:   { furigana: "券[けん]売[ばい]機[き]", pos: noun, glosses: [ticket machine], jlpt: 0 }
+出口:     { furigana: "出[で]口[ぐち]", pos: noun, glosses: [exit], jlpt: 5 }
+階段:     { furigana: "階[かい]段[だん]", pos: noun, glosses: [stairs], jlpt: 5 }
+乗り換え: { furigana: "乗[の]り換[か]え", pos: noun, glosses: [transfer, change of trains], jlpt: 0 }
+
+# 切符 tickets and fares
+定期券:   { furigana: "定[てい]期[き]券[けん]", pos: noun, glosses: [commuter pass], jlpt: 0 }
+ICカード: { furigana: "IC[アイシー]カード", pos: noun, glosses: [IC card, smart card], jlpt: 0 }
+運賃:     { furigana: "運[うん]賃[ちん]", pos: noun, glosses: [fare], jlpt: 0 }
+回数券:   { furigana: "回[かい]数[すう]券[けん]", pos: noun, glosses: [book of tickets, multi-ride ticket], jlpt: 0 }
+チャージ: { reading: チャージ, pos: noun, glosses: [top-up, adding credit], jlpt: 0 }
+往復:     { furigana: "往[おう]復[ふく]", pos: noun, glosses: [round trip, return], jlpt: 0 }
+
+# 列車 kinds of train on the departure board
+普通:   { furigana: "普[ふ]通[つう]", pos: noun, glosses: [ordinary, local (all stops)], jlpt: 4 }
+快速:   { furigana: "快[かい]速[そく]", pos: noun, glosses: [rapid (skips some stops)], jlpt: 0 }
+急行:   { furigana: "急[きゅう]行[こう]", pos: noun, glosses: [express], jlpt: 4 }
+特急:   { furigana: "特[とっ]急[きゅう]", pos: noun, glosses: [limited express], jlpt: 4 }
+新幹線: { furigana: "新[しん]幹[かん]線[せん]", pos: noun, glosses: [shinkansen, bullet train], jlpt: 0 }
+回送:   { furigana: "回[かい]送[そう]", pos: noun, glosses: [not in service], jlpt: 0 }
+
+# 車内 on board
+つり革: { furigana: "つり革[かわ]", pos: noun, glosses: [hanging strap], jlpt: 0 }
+優先席: { furigana: "優[ゆう]先[せん]席[せき]", pos: noun, glosses: [priority seat], jlpt: 0 }
+網棚:   { furigana: "網[あみ]棚[だな]", pos: noun, glosses: [luggage rack], jlpt: 0 }
+車掌:   { furigana: "車[しゃ]掌[しょう]", pos: noun, glosses: [conductor, guard], jlpt: 0 }
+
+# コンビニで買う · at the convenience store — 会計 the register
+レジ:     { reading: レジ, pos: noun, glosses: [till, checkout], jlpt: 0 }
+レシート: { reading: レシート, pos: noun, glosses: [receipt], jlpt: 0 }
+お釣り:   { furigana: "お釣[つ]り", pos: noun, glosses: [change (money back)], jlpt: 4 }
+袋:       { furigana: "袋[ふくろ]", pos: noun, glosses: [bag], jlpt: 5 }
+現金:     { furigana: "現[げん]金[きん]", pos: noun, glosses: [cash], jlpt: 0 }
+割り箸:   { furigana: "割[わ]り箸[ばし]", pos: noun, glosses: [disposable chopsticks], jlpt: 0 }
+
+# ご飯 a quick meal
+おにぎり:   { reading: おにぎり, pos: noun, glosses: [rice ball], jlpt: 0 }
+弁当:       { furigana: "弁[べん]当[とう]", pos: noun, glosses: [boxed lunch, bento], jlpt: 4 }
+サンドイッチ: { reading: サンドイッチ, pos: noun, glosses: [sandwich], jlpt: 0 }
+カップ麺:   { furigana: "カップ麺[めん]", pos: noun, glosses: [cup noodles], jlpt: 0 }
+おでん:     { reading: おでん, pos: noun, glosses: [oden (simmered hotpot)], jlpt: 0 }
+肉まん:     { furigana: "肉[にく]まん", pos: noun, glosses: [steamed meat bun], jlpt: 0 }
+
+# 店内 services in the store
+ATM:     { reading: エーティーエム, pos: noun, glosses: [cash machine, ATM], jlpt: 0 }
+コピー:  { reading: コピー, pos: noun, glosses: [photocopy, copy], jlpt: 4 }
+宅配便:  { furigana: "宅[たく]配[はい]便[びん]", pos: noun, glosses: [parcel delivery], jlpt: 0 }
+イートイン: { reading: イートイン, pos: noun, glosses: [eat-in corner, seating area], jlpt: 0 }
+トイレ:  { reading: トイレ, pos: noun, glosses: [toilet, restroom], jlpt: 5 }
+ゴミ箱:  { furigana: "ゴミ箱[ばこ]", pos: noun, glosses: [rubbish bin, trash can], jlpt: 0 }

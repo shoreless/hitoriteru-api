@@ -30,3 +30,23 @@
   columns: [2, 3, 4, 5]
   slack: 2.0
   daily: true
+
+- id: densha
+  title: "電[でん]車[しゃ]に乗[の]る"
+  title_en: Taking the train
+  blurb_en: The station, your ticket, the departure board and on board.
+  categories: [eki, kippu, ressha, shanai]
+  foundations: 3
+  columns: [2, 3, 4, 5]
+  slack: 2.0
+  daily: true
+
+- id: konbini
+  title: "コンビニで買[か]う"
+  title_en: At the convenience store
+  blurb_en: A quick meal, a drink, the register and everything else.
+  categories: [keishoku, nomimono, kaikei, tennai]
+  foundations: 3
+  columns: [2, 3, 4, 5]
+  slack: 2.0
+  daily: true

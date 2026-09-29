@@ -11,7 +11,8 @@
   label_en: weather
   rule_en: Weather words
   min_level: 5
-  members: [雨, 雪, 風, 晴れ, 曇り, 雲]
+  members: [雨, 雪, 風, 晴れ, 曇り, 雲, 台風]
+  excludes: [shizen]
 
 - id: tabemono
   type: meaning
@@ -19,7 +20,10 @@
   label_en: food
   rule_en: Things you eat
   min_level: 5
-  members: [パン, 肉, 魚, 卵, 野菜, 果物]
+  members: [パン, 肉, 魚, 卵, 野菜, 果物, ご飯, お菓子, 牛肉, 豚肉]
+  near_miss:
+    牛肉: "belongs with 食べ物; it contains 牛 (cow) but it's beef"
+    豚肉: "belongs with 食べ物; it contains 豚 (pig) but it's pork"
 
 - id: nomimono
   type: meaning
@@ -27,7 +31,7 @@
   label_en: drinks
   rule_en: Things you drink
   min_level: 5
-  members: [水, お茶, コーヒー, 牛乳, お酒, ジュース]
+  members: [水, お茶, コーヒー, 牛乳, お酒, ジュース, 紅茶]
   near_miss:
     牛乳: "belongs with 飲み物; it contains 牛 (cow) but it's something you drink"
 
@@ -53,7 +57,7 @@
   label_en: family
   rule_en: Family members (your own)
   min_level: 5
-  members: [父, 母, 兄, 姉, 弟, 妹]
+  members: [父, 母, 兄, 姉, 弟, 妹, 祖父, 祖母, 両親]
 
 - id: norimono
   type: meaning
@@ -61,7 +65,7 @@
   label_en: vehicles
   rule_en: Ways to travel
   min_level: 5
-  members: [車, 電車, バス, 自転車, 飛行機, タクシー]
+  members: [車, 電車, バス, 自転車, 飛行機, タクシー, 地下鉄, 船]
 
 - id: iro
   type: meaning
@@ -69,7 +73,9 @@
   label_en: colours
   rule_en: Colours
   min_level: 5
-  members: [赤, 青, 白, 黒, 黄色, 茶色]
+  members: [赤, 青, 白, 黒, 黄色, 茶色, 緑]
+  near_miss:
+    茶色: "belongs with 色; it contains 茶 (tea) but it's the colour brown"
 
 - id: ichinichi
   type: meaning
@@ -77,7 +83,7 @@
   label_en: times of day
   rule_en: Parts of the day
   min_level: 5
-  members: [朝, 昼, 夕方, 晩, 夜, 午後]
+  members: [朝, 昼, 夕方, 晩, 夜, 午後, 午前]
 
 - id: den
   type: shared_kanji
@@ -85,7 +91,85 @@
   label_en: electricity
   rule_en: Words containing the kanji 電, meaning electricity
   min_level: 4
-  members: [電車, 電話, 電気, 電池, 停電, 電子レンジ]
+  members: [電車, 電話, 電気, 電灯, 電報, 電池, 停電, 電子レンジ]
+
+- id: fuku
+  type: meaning
+  label: "服[ふく]"
+  label_en: clothes
+  rule_en: Things you wear
+  min_level: 5
+  members: [シャツ, 靴, 帽子, 靴下, スカート, ズボン, 上着, セーター]
+
+- id: machi
+  type: meaning
+  label: "町[まち]"
+  label_en: in town
+  rule_en: Places you go to in town
+  min_level: 5
+  members: [駅, 銀行, 病院, 郵便局, 公園, 図書館, 交番, 大使館]
+
+- id: shizen
+  type: meaning
+  label: "自[し]然[ぜん]"
+  label_en: nature
+  rule_en: The natural world around you
+  min_level: 5
+  members: [山, 川, 海, 空, 池, 花, 木]
+  excludes: [tenki]
+
+- id: heya
+  type: meaning
+  label: "部[へ]屋[や]"
+  label_en: in a room
+  rule_en: Things in a room at home
+  min_level: 5
+  members: [机, 椅子, 窓, ドア, ベッド, 冷蔵庫, 本棚]
+
+- id: bunbougu
+  type: meaning
+  label: "文[ぶん]房[ぼう]具[ぐ]"
+  label_en: stationery
+  rule_en: Things you write with or write on
+  min_level: 5
+  members: [鉛筆, ペン, ボールペン, 万年筆, ノート, 紙]
+
+- id: shigoto
+  type: meaning
+  label: "仕[し]事[ごと]"
+  label_en: jobs
+  rule_en: People named by their job
+  min_level: 4
+  members: [医者, 先生, 警官, 歌手, 運転手, 店員]
+
+- id: kanjou
+  type: meaning
+  label: "感[かん]情[じょう]"
+  label_en: feelings
+  rule_en: How you feel
+  min_level: 4
+  members: [嬉しい, 悲しい, 寂しい, 楽しい, 恥ずかしい, 心配]
+
+- id: gaku
+  type: shared_kanji
+  label: "学[がく]"
+  label_en: study
+  rule_en: Words containing the kanji 学, meaning study or learning
+  min_level: 4
+  members: [学校, 大学, 学生, 留学生, 数学, 科学, 医学, 文学]
+  near_miss:
+    医学: "belongs with 学; it's medicine as a subject, not a job"
+
+- id: ki
+  type: shared_kanji
+  label: "気[き]"
+  label_en: spirit
+  rule_en: Words containing the kanji 気, meaning spirit, air or mood
+  min_level: 4
+  members: [天気, 元気, 病気, 電気, 空気, 気持ち, 人気]
+  near_miss:
+    天気: "belongs with 気; it's the word for weather, not a kind of weather"
+    空気: "belongs with 気; it contains 空 (sky) but it's the air you breathe"
 
 # ---------------------------------------------------------------------------
 # Themed categories: min_level "themed" keeps them out of journey boards; themes.yaml picks them.
@@ -162,3 +246,65 @@
   rule_en: What you say after the film
   min_level: themed
   members: [面白い, 怖い, 感動, つまらない, 泣ける, 最高]
+
+- id: eki
+  type: meaning
+  label: "駅[えき]"
+  label_en: station
+  rule_en: Things at the station, before you board
+  min_level: themed
+  members: [改札, ホーム, 券売機, 出口, 階段, 乗り換え]
+  near_miss:
+    券売機: "belongs with 駅; it contains 券 (ticket) but it's the ticket machine"
+
+- id: kippu
+  type: meaning
+  label: "切[きっ]符[ぷ]"
+  label_en: tickets
+  rule_en: Tickets and paying the fare
+  min_level: themed
+  members: [定期券, ICカード, 運賃, 回数券, チャージ, 往復]
+
+- id: ressha
+  type: meaning
+  label: "列[れっ]車[しゃ]"
+  label_en: trains
+  rule_en: Kinds of train on the departure board
+  min_level: themed
+  members: [普通, 快速, 急行, 特急, 新幹線, 回送]
+  near_miss:
+    回送: "belongs with 列車; it contains 回 like 回数券, but it's a train not in service"
+
+- id: shanai
+  type: meaning
+  label: "車[しゃ]内[ない]"
+  label_en: on board
+  rule_en: What you find inside the train
+  min_level: themed
+  members: [つり革, 優先席, 網棚, 車掌, 座席, ドア]
+
+- id: kaikei
+  type: meaning
+  label: "会[かい]計[けい]"
+  label_en: the register
+  rule_en: Paying at the till
+  min_level: themed
+  members: [レジ, レシート, お釣り, 袋, 現金, 割り箸]
+  near_miss:
+    割り箸: "belongs with 会計; the clerk asks at the till if you want them"
+
+- id: keishoku
+  type: meaning
+  label: "ご飯[はん]"
+  label_en: a quick meal
+  rule_en: Ready-to-eat food from the shelves
+  min_level: themed
+  members: [おにぎり, 弁当, サンドイッチ, カップ麺, おでん, 肉まん]
+
+- id: tennai
+  type: meaning
+  label: "店[てん]内[ない]"
+  label_en: in store
+  rule_en: Services and facilities in the store
+  min_level: themed
+  members: [ATM, コピー, 宅配便, イートイン, トイレ, ゴミ箱]
