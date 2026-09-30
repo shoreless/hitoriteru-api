@@ -271,6 +271,287 @@
 人気:   { furigana: "人[にん]気[き]", pos: noun, glosses: [popularity], jlpt: 4 }
 
 # ---------------------------------------------------------------------------
+# Everyday journey words (v5). JLPT tags are loose: 5 = everyday and easy, 4 = a step up.
+# ---------------------------------------------------------------------------
+
+# 国 · countries
+日本: { furigana: "日[に]本[ほん]", pos: noun, glosses: [Japan], jlpt: 5 }
+中国: { furigana: "中[ちゅう]国[ごく]", pos: noun, glosses: [China], jlpt: 5 }
+韓国: { furigana: "韓[かん]国[こく]", pos: noun, glosses: [South Korea], jlpt: 5 }
+アメリカ: { reading: アメリカ, pos: noun, glosses: [America, USA], jlpt: 5 }
+イギリス: { reading: イギリス, pos: noun, glosses: [UK, Britain], jlpt: 5 }
+フランス: { reading: フランス, pos: noun, glosses: [France], jlpt: 5 }
+ドイツ: { reading: ドイツ, pos: noun, glosses: [Germany], jlpt: 5 }
+イタリア: { reading: イタリア, pos: noun, glosses: [Italy], jlpt: 5 }
+カナダ: { reading: カナダ, pos: noun, glosses: [Canada], jlpt: 5 }
+インド: { reading: インド, pos: noun, glosses: [India], jlpt: 5 }
+ブラジル: { reading: ブラジル, pos: noun, glosses: [Brazil], jlpt: 5 }
+スペイン: { reading: スペイン, pos: noun, glosses: [Spain], jlpt: 5 }
+
+# 言語 · languages
+日本語: { furigana: "日[に]本[ほん]語[ご]", pos: noun, glosses: [Japanese], jlpt: 5 }
+英語: { furigana: "英[えい]語[ご]", pos: noun, glosses: [English], jlpt: 5 }
+中国語: { furigana: "中[ちゅう]国[ごく]語[ご]", pos: noun, glosses: [Chinese], jlpt: 5 }
+韓国語: { furigana: "韓[かん]国[こく]語[ご]", pos: noun, glosses: [Korean], jlpt: 5 }
+フランス語: { furigana: "フランス語[ご]", pos: noun, glosses: [French], jlpt: 5 }
+スペイン語: { furigana: "スペイン語[ご]", pos: noun, glosses: [Spanish], jlpt: 5 }
+ドイツ語: { furigana: "ドイツ語[ご]", pos: noun, glosses: [German], jlpt: 5 }
+イタリア語: { furigana: "イタリア語[ご]", pos: noun, glosses: [Italian], jlpt: 5 }
+
+# 運動 · sports
+サッカー: { reading: サッカー, pos: noun, glosses: [football, soccer], jlpt: 5 }
+野球: { furigana: "野[や]球[きゅう]", pos: noun, glosses: [baseball], jlpt: 5 }
+テニス: { reading: テニス, pos: noun, glosses: [tennis], jlpt: 5 }
+水泳: { furigana: "水[すい]泳[えい]", pos: noun, glosses: [swimming], jlpt: 5 }
+ゴルフ: { reading: ゴルフ, pos: noun, glosses: [golf], jlpt: 5 }
+スキー: { reading: スキー, pos: noun, glosses: [skiing], jlpt: 5 }
+柔道: { furigana: "柔[じゅう]道[どう]", pos: noun, glosses: [judo], jlpt: 5 }
+空手: { furigana: "空[から]手[て]", pos: noun, glosses: [karate], jlpt: 5 }
+卓球: { furigana: "卓[たっ]球[きゅう]", pos: noun, glosses: [table tennis], jlpt: 5 }
+相撲: { furigana: "相撲[すもう]", pos: noun, glosses: [sumo], jlpt: 5 }
+バスケ: { reading: バスケ, pos: noun, glosses: [basketball], jlpt: 5 }
+マラソン: { reading: マラソン, pos: noun, glosses: [marathon], jlpt: 5 }
+
+# 楽器 · instruments
+ピアノ: { reading: ピアノ, pos: noun, glosses: [piano], jlpt: 5 }
+ギター: { reading: ギター, pos: noun, glosses: [guitar], jlpt: 5 }
+バイオリン: { reading: バイオリン, pos: noun, glosses: [violin], jlpt: 5 }
+ドラム: { reading: ドラム, pos: noun, glosses: [drums], jlpt: 5 }
+太鼓: { furigana: "太[たい]鼓[こ]", pos: noun, glosses: [taiko drum], jlpt: 5 }
+笛: { furigana: "笛[ふえ]", pos: noun, glosses: [flute, whistle], jlpt: 5 }
+トランペット: { reading: トランペット, pos: noun, glosses: [trumpet], jlpt: 5 }
+フルート: { reading: フルート, pos: noun, glosses: [flute (Western)], jlpt: 5 }
+三味線: { furigana: "三[しゃ]味[み]線[せん]", pos: noun, glosses: [shamisen], jlpt: 4 }
+琴: { furigana: "琴[こと]", pos: noun, glosses: [koto (zither)], jlpt: 4 }
+
+# 果物 · fruit
+りんご: { reading: りんご, pos: noun, glosses: [apple], jlpt: 5 }
+バナナ: { reading: バナナ, pos: noun, glosses: [banana], jlpt: 5 }
+みかん: { reading: みかん, pos: noun, glosses: [mandarin orange], jlpt: 5 }
+いちご: { reading: いちご, pos: noun, glosses: [strawberry], jlpt: 5 }
+ぶどう: { reading: ぶどう, pos: noun, glosses: [grapes], jlpt: 5 }
+もも: { reading: もも, pos: noun, glosses: [peach], jlpt: 5 }
+メロン: { reading: メロン, pos: noun, glosses: [melon], jlpt: 5 }
+スイカ: { reading: スイカ, pos: noun, glosses: [watermelon], jlpt: 5 }
+レモン: { reading: レモン, pos: noun, glosses: [lemon], jlpt: 5 }
+なし: { reading: なし, pos: noun, glosses: [Japanese pear], jlpt: 5 }
+さくらんぼ: { reading: さくらんぼ, pos: noun, glosses: [cherry], jlpt: 5 }
+
+# 野菜 · vegetables
+トマト: { reading: トマト, pos: noun, glosses: [tomato], jlpt: 5 }
+キャベツ: { reading: キャベツ, pos: noun, glosses: [cabbage], jlpt: 5 }
+にんじん: { reading: にんじん, pos: noun, glosses: [carrot], jlpt: 5 }
+玉ねぎ: { furigana: "玉[たま]ねぎ", pos: noun, glosses: [onion], jlpt: 5 }
+じゃがいも: { reading: じゃがいも, pos: noun, glosses: [potato], jlpt: 5 }
+きゅうり: { reading: きゅうり, pos: noun, glosses: [cucumber], jlpt: 5 }
+ピーマン: { reading: ピーマン, pos: noun, glosses: [green pepper], jlpt: 5 }
+なす: { reading: なす, pos: noun, glosses: [aubergine, eggplant], jlpt: 5 }
+ねぎ: { reading: ねぎ, pos: noun, glosses: [spring onion, leek], jlpt: 5 }
+大根: { furigana: "大[だい]根[こん]", pos: noun, glosses: [daikon radish], jlpt: 5 }
+レタス: { reading: レタス, pos: noun, glosses: [lettuce], jlpt: 5 }
+かぼちゃ: { reading: かぼちゃ, pos: noun, glosses: [pumpkin, squash], jlpt: 5 }
+
+# 料理 · dishes
+寿司: { furigana: "寿[す]司[し]", pos: noun, glosses: [sushi], jlpt: 5 }
+ラーメン: { reading: ラーメン, pos: noun, glosses: [ramen], jlpt: 5 }
+天ぷら: { furigana: "天[てん]ぷら", pos: noun, glosses: [tempura], jlpt: 5 }
+うどん: { reading: うどん, pos: noun, glosses: [udon noodles], jlpt: 5 }
+そば: { reading: そば, pos: noun, glosses: [soba noodles], jlpt: 5 }
+カレー: { reading: カレー, pos: noun, glosses: [curry], jlpt: 5 }
+刺身: { furigana: "刺[さし]身[み]", pos: noun, glosses: [sashimi], jlpt: 5 }
+焼き鳥: { furigana: "焼[や]き鳥[とり]", pos: noun, glosses: [yakitori, grilled chicken], jlpt: 5 }
+すき焼き: { furigana: "すき焼[や]き", pos: noun, glosses: [sukiyaki], jlpt: 5 }
+とんかつ: { reading: とんかつ, pos: noun, glosses: [pork cutlet], jlpt: 5 }
+味噌汁: { furigana: "味[み]噌[そ]汁[しる]", pos: noun, glosses: [miso soup], jlpt: 5 }
+お好み焼き: { furigana: "お好[この]み焼[や]き", pos: noun, glosses: [okonomiyaki], jlpt: 5 }
+
+# おやつ · snacks
+ケーキ: { reading: ケーキ, pos: noun, glosses: [cake], jlpt: 5 }
+アイス: { reading: アイス, pos: noun, glosses: [ice cream], jlpt: 5 }
+チョコ: { reading: チョコ, pos: noun, glosses: [chocolate], jlpt: 5 }
+クッキー: { reading: クッキー, pos: noun, glosses: [cookie, biscuit], jlpt: 5 }
+プリン: { reading: プリン, pos: noun, glosses: [custard pudding], jlpt: 5 }
+ドーナツ: { reading: ドーナツ, pos: noun, glosses: [doughnut], jlpt: 5 }
+飴: { furigana: "飴[あめ]", pos: noun, glosses: [candy, boiled sweet], jlpt: 5 }
+ガム: { reading: ガム, pos: noun, glosses: [chewing gum], jlpt: 5 }
+団子: { furigana: "団[だん]子[ご]", pos: noun, glosses: [dango (rice dumplings)], jlpt: 5 }
+せんべい: { reading: せんべい, pos: noun, glosses: [rice cracker], jlpt: 5 }
+パフェ: { reading: パフェ, pos: noun, glosses: [parfait], jlpt: 5 }
+餅: { furigana: "餅[もち]", pos: noun, glosses: [mochi (rice cake)], jlpt: 5 }
+
+# 曜日 · days of the week
+月曜日: { furigana: "月[げつ]曜[よう]日[び]", pos: noun, glosses: [Monday], jlpt: 5 }
+火曜日: { furigana: "火[か]曜[よう]日[び]", pos: noun, glosses: [Tuesday], jlpt: 5 }
+水曜日: { furigana: "水[すい]曜[よう]日[び]", pos: noun, glosses: [Wednesday], jlpt: 5 }
+木曜日: { furigana: "木[もく]曜[よう]日[び]", pos: noun, glosses: [Thursday], jlpt: 5 }
+金曜日: { furigana: "金[きん]曜[よう]日[び]", pos: noun, glosses: [Friday], jlpt: 5 }
+土曜日: { furigana: "土[ど]曜[よう]日[び]", pos: noun, glosses: [Saturday], jlpt: 5 }
+日曜日: { furigana: "日[にち]曜[よう]日[び]", pos: noun, glosses: [Sunday], jlpt: 5 }
+週末: { furigana: "週[しゅう]末[まつ]", pos: noun, glosses: [weekend], jlpt: 4 }
+平日: { furigana: "平[へい]日[じつ]", pos: noun, glosses: [weekday], jlpt: 4 }
+
+# 季節 · seasons
+春: { furigana: "春[はる]", pos: noun, glosses: [spring], jlpt: 5 }
+夏: { furigana: "夏[なつ]", pos: noun, glosses: [summer], jlpt: 5 }
+秋: { furigana: "秋[あき]", pos: noun, glosses: [autumn, fall], jlpt: 5 }
+冬: { furigana: "冬[ふゆ]", pos: noun, glosses: [winter], jlpt: 5 }
+お正月: { furigana: "お正[しょう]月[がつ]", pos: noun, glosses: [New Year], jlpt: 5 }
+花見: { furigana: "花[はな]見[み]", pos: noun, glosses: [cherry-blossom viewing], jlpt: 5 }
+夏休み: { furigana: "夏[なつ]休[やす]み", pos: noun, glosses: [summer holidays], jlpt: 5 }
+花火: { furigana: "花[はな]火[び]", pos: noun, glosses: [fireworks], jlpt: 5 }
+祭り: { furigana: "祭[まつ]り", pos: noun, glosses: [festival], jlpt: 5 }
+紅葉: { furigana: "紅葉[こうよう]", pos: noun, glosses: [autumn leaves], jlpt: 4 }
+
+# お金 · money
+お札: { furigana: "お札[さつ]", pos: noun, glosses: [banknote], jlpt: 5 }
+小銭: { furigana: "小[こ]銭[ぜに]", pos: noun, glosses: [coins, small change], jlpt: 5 }
+財布: { furigana: "財[さい]布[ふ]", pos: noun, glosses: [wallet, purse], jlpt: 5 }
+値段: { furigana: "値[ね]段[だん]", pos: noun, glosses: [price], jlpt: 5 }
+貯金: { furigana: "貯[ちょ]金[きん]", pos: noun, glosses: [savings], jlpt: 5 }
+給料: { furigana: "給[きゅう]料[りょう]", pos: noun, glosses: [salary, pay], jlpt: 5 }
+税金: { furigana: "税[ぜい]金[きん]", pos: noun, glosses: [tax], jlpt: 4 }
+
+# 家電 · appliances
+洗濯機: { furigana: "洗[せん]濯[たく]機[き]", pos: noun, glosses: [washing machine], jlpt: 5 }
+掃除機: { furigana: "掃[そう]除[じ]機[き]", pos: noun, glosses: [vacuum cleaner], jlpt: 5 }
+エアコン: { reading: エアコン, pos: noun, glosses: [air conditioner], jlpt: 5 }
+ドライヤー: { reading: ドライヤー, pos: noun, glosses: [hair dryer], jlpt: 5 }
+扇風機: { furigana: "扇[せん]風[ぷう]機[き]", pos: noun, glosses: [electric fan], jlpt: 5 }
+炊飯器: { furigana: "炊[すい]飯[はん]器[き]", pos: noun, glosses: [rice cooker], jlpt: 5 }
+アイロン: { reading: アイロン, pos: noun, glosses: [iron (for clothes)], jlpt: 5 }
+
+# スマホ · on your phone
+アプリ: { reading: アプリ, pos: noun, glosses: [app], jlpt: 5 }
+メール: { reading: メール, pos: noun, glosses: [email, message], jlpt: 5 }
+写真: { furigana: "写[しゃ]真[しん]", pos: noun, glosses: [photo], jlpt: 5 }
+動画: { furigana: "動[どう]画[が]", pos: noun, glosses: [video], jlpt: 5 }
+絵文字: { furigana: "絵[え]文[も]字[じ]", pos: noun, glosses: [emoji], jlpt: 5 }
+ゲーム: { reading: ゲーム, pos: noun, glosses: [game], jlpt: 5 }
+地図: { furigana: "地[ち]図[ず]", pos: noun, glosses: [map], jlpt: 5 }
+カメラ: { reading: カメラ, pos: noun, glosses: [camera], jlpt: 5 }
+画面: { furigana: "画[が]面[めん]", pos: noun, glosses: [screen], jlpt: 5 }
+ネット: { reading: ネット, pos: noun, glosses: [the internet], jlpt: 5 }
+
+# 旅行 · travel
+パスポート: { reading: パスポート, pos: noun, glosses: [passport], jlpt: 5 }
+空港: { furigana: "空[くう]港[こう]", pos: noun, glosses: [airport], jlpt: 5 }
+荷物: { furigana: "荷[に]物[もつ]", pos: noun, glosses: [luggage, baggage], jlpt: 5 }
+お土産: { furigana: "お土産[みやげ]", pos: noun, glosses: [souvenir], jlpt: 5 }
+観光: { furigana: "観[かん]光[こう]", pos: noun, glosses: [sightseeing], jlpt: 5 }
+旅館: { furigana: "旅[りょ]館[かん]", pos: noun, glosses: [ryokan (Japanese inn)], jlpt: 4 }
+温泉: { furigana: "温[おん]泉[せん]", pos: noun, glosses: [hot spring], jlpt: 4 }
+ガイド: { reading: ガイド, pos: noun, glosses: [tour guide], jlpt: 5 }
+
+# 性格 · personality (N4+)
+優しい: { furigana: "優[やさ]しい", pos: i-adjective, glosses: [kind, gentle], jlpt: 4 }
+親切: { furigana: "親[しん]切[せつ]", pos: na-adjective, glosses: [kind, helpful], jlpt: 4 }
+厳しい: { furigana: "厳[きび]しい", pos: i-adjective, glosses: [strict], jlpt: 4 }
+明るい: { furigana: "明[あか]るい", pos: i-adjective, glosses: [cheerful, bright], jlpt: 4 }
+真面目: { furigana: "真面目[まじめ]", pos: na-adjective, glosses: [serious, hard-working], jlpt: 4 }
+意地悪: { furigana: "意[い]地[じ]悪[わる]", pos: na-adjective, glosses: [mean, nasty], jlpt: 4 }
+素直: { furigana: "素[す]直[なお]", pos: na-adjective, glosses: [honest, obedient], jlpt: 4 }
+わがまま: { reading: わがまま, pos: na-adjective, glosses: [selfish, spoiled], jlpt: 4 }
+
+# 味 · taste
+甘い: { furigana: "甘[あま]い", pos: i-adjective, glosses: [sweet], jlpt: 5 }
+辛い: { furigana: "辛[から]い", pos: i-adjective, glosses: [spicy, hot], jlpt: 5 }
+苦い: { furigana: "苦[にが]い", pos: i-adjective, glosses: [bitter], jlpt: 5 }
+酸っぱい: { furigana: "酸[す]っぱい", pos: i-adjective, glosses: [sour], jlpt: 5 }
+しょっぱい: { reading: しょっぱい, pos: i-adjective, glosses: [salty], jlpt: 5 }
+美味しい: { furigana: "美味[おい]しい", pos: i-adjective, glosses: [delicious], jlpt: 5 }
+まずい: { reading: まずい, pos: i-adjective, glosses: [tastes bad], jlpt: 5 }
+濃い: { furigana: "濃[こ]い", pos: i-adjective, glosses: [strong, rich (flavour)], jlpt: 4 }
+
+# 植物 · plants
+桜: { furigana: "桜[さくら]", pos: noun, glosses: [cherry blossom], jlpt: 5 }
+バラ: { reading: バラ, pos: noun, glosses: [rose], jlpt: 5 }
+ひまわり: { reading: ひまわり, pos: noun, glosses: [sunflower], jlpt: 5 }
+チューリップ: { reading: チューリップ, pos: noun, glosses: [tulip], jlpt: 5 }
+松: { furigana: "松[まつ]", pos: noun, glosses: [pine], jlpt: 5 }
+竹: { furigana: "竹[たけ]", pos: noun, glosses: [bamboo], jlpt: 5 }
+梅: { furigana: "梅[うめ]", pos: noun, glosses: [plum (tree)], jlpt: 5 }
+菊: { furigana: "菊[きく]", pos: noun, glosses: [chrysanthemum], jlpt: 4 }
+朝顔: { furigana: "朝[あさ]顔[がお]", pos: noun, glosses: [morning glory], jlpt: 4 }
+
+# 教室 · at school
+黒板: { furigana: "黒[こく]板[ばん]", pos: noun, glosses: [blackboard], jlpt: 5 }
+宿題: { furigana: "宿[しゅく]題[だい]", pos: noun, glosses: [homework], jlpt: 5 }
+試験: { furigana: "試[し]験[けん]", pos: noun, glosses: [exam, test], jlpt: 5 }
+授業: { furigana: "授[じゅ]業[ぎょう]", pos: noun, glosses: [class, lesson], jlpt: 5 }
+教科書: { furigana: "教[きょう]科[か]書[しょ]", pos: noun, glosses: [textbook], jlpt: 5 }
+給食: { furigana: "給[きゅう]食[しょく]", pos: noun, glosses: [school lunch], jlpt: 4 }
+時間割: { furigana: "時[じ]間[かん]割[わり]", pos: noun, glosses: [timetable], jlpt: 4 }
+休み時間: { furigana: "休[やす]み時[じ]間[かん]", pos: noun, glosses: [break time, recess], jlpt: 5 }
+運動会: { furigana: "運[うん]動[どう]会[かい]", pos: noun, glosses: [sports day], jlpt: 4 }
+
+# 家 · the house
+台所: { furigana: "台[だい]所[どころ]", pos: noun, glosses: [kitchen], jlpt: 5 }
+玄関: { furigana: "玄[げん]関[かん]", pos: noun, glosses: [entrance hall], jlpt: 5 }
+お風呂: { furigana: "お風呂[ふろ]", pos: noun, glosses: [bath], jlpt: 5 }
+庭: { furigana: "庭[にわ]", pos: noun, glosses: [garden, yard], jlpt: 5 }
+居間: { furigana: "居[い]間[ま]", pos: noun, glosses: [living room], jlpt: 5 }
+廊下: { furigana: "廊[ろう]下[か]", pos: noun, glosses: [corridor, hallway], jlpt: 5 }
+屋根: { furigana: "屋[や]根[ね]", pos: noun, glosses: [roof], jlpt: 4 }
+
+# 家具 · furniture
+ソファ: { reading: ソファ, pos: noun, glosses: [sofa], jlpt: 5 }
+カーテン: { reading: カーテン, pos: noun, glosses: [curtain], jlpt: 5 }
+布団: { furigana: "布[ふ]団[とん]", pos: noun, glosses: [futon], jlpt: 5 }
+鏡: { furigana: "鏡[かがみ]", pos: noun, glosses: [mirror], jlpt: 4 }
+
+# 調理 · cooking
+切る: { furigana: "切[き]る", pos: verb, glosses: [to cut], jlpt: 5 }
+焼く: { furigana: "焼[や]く", pos: verb, glosses: [to grill, to bake], jlpt: 5 }
+煮る: { furigana: "煮[に]る", pos: verb, glosses: [to simmer, to boil], jlpt: 5 }
+揚げる: { furigana: "揚[あ]げる", pos: verb, glosses: [to deep-fry], jlpt: 5 }
+炒める: { furigana: "炒[いた]める", pos: verb, glosses: [to stir-fry], jlpt: 4 }
+茹でる: { furigana: "茹[ゆ]でる", pos: verb, glosses: [to boil (in water)], jlpt: 5 }
+混ぜる: { furigana: "混[ま]ぜる", pos: verb, glosses: [to mix, to stir], jlpt: 5 }
+洗う: { furigana: "洗[あら]う", pos: verb, glosses: [to wash], jlpt: 5 }
+蒸す: { furigana: "蒸[む]す", pos: verb, glosses: [to steam], jlpt: 4 }
+
+# 仕事 · more jobs
+会社員: { furigana: "会[かい]社[しゃ]員[いん]", pos: noun, glosses: [office worker], jlpt: 5 }
+看護師: { furigana: "看[かん]護[ご]師[し]", pos: noun, glosses: [nurse], jlpt: 5 }
+消防士: { furigana: "消[しょう]防[ぼう]士[し]", pos: noun, glosses: [firefighter], jlpt: 5 }
+大工: { furigana: "大[だい]工[く]", pos: noun, glosses: [carpenter], jlpt: 5 }
+美容師: { furigana: "美[び]容[よう]師[し]", pos: noun, glosses: [hairdresser], jlpt: 5 }
+弁護士: { furigana: "弁[べん]護[ご]士[し]", pos: noun, glosses: [lawyer], jlpt: 5 }
+パイロット: { reading: パイロット, pos: noun, glosses: [pilot], jlpt: 5 }
+シェフ: { reading: シェフ, pos: noun, glosses: [chef], jlpt: 5 }
+
+# 動物 · more animals
+ライオン: { reading: ライオン, pos: noun, glosses: [lion], jlpt: 5 }
+パンダ: { reading: パンダ, pos: noun, glosses: [panda], jlpt: 5 }
+キリン: { reading: キリン, pos: noun, glosses: [giraffe], jlpt: 5 }
+象: { furigana: "象[ぞう]", pos: noun, glosses: [elephant], jlpt: 5 }
+猿: { furigana: "猿[さる]", pos: noun, glosses: [monkey], jlpt: 5 }
+熊: { furigana: "熊[くま]", pos: noun, glosses: [bear], jlpt: 5 }
+うさぎ: { reading: うさぎ, pos: noun, glosses: [rabbit], jlpt: 5 }
+ねずみ: { reading: ねずみ, pos: noun, glosses: [mouse, rat], jlpt: 5 }
+羊: { furigana: "羊[ひつじ]", pos: noun, glosses: [sheep], jlpt: 5 }
+きつね: { reading: きつね, pos: noun, glosses: [fox], jlpt: 5 }
+
+# 色 · more colours
+ピンク: { reading: ピンク, pos: noun, glosses: [pink], jlpt: 5 }
+オレンジ: { reading: オレンジ, pos: noun, glosses: [orange], jlpt: 5 }
+紫: { furigana: "紫[むらさき]", pos: noun, glosses: [purple], jlpt: 4 }
+灰色: { furigana: "灰[はい]色[いろ]", pos: noun, glosses: [grey], jlpt: 4 }
+金色: { furigana: "金[きん]色[いろ]", pos: noun, glosses: [gold], jlpt: 5 }
+銀色: { furigana: "銀[ぎん]色[いろ]", pos: noun, glosses: [silver], jlpt: 5 }
+水色: { furigana: "水[みず]色[いろ]", pos: noun, glosses: [light blue], jlpt: 5 }
+
+# 天気 · more weather
+雷: { furigana: "雷[かみなり]", pos: noun, glosses: [thunder, lightning], jlpt: 5 }
+霧: { furigana: "霧[きり]", pos: noun, glosses: [fog, mist], jlpt: 4 }
+梅雨: { furigana: "梅雨[つゆ]", pos: noun, glosses: [rainy season], jlpt: 4 }
+
+# 乗り物 · more vehicles
+トラック: { reading: トラック, pos: noun, glosses: [truck, lorry], jlpt: 5 }
+バイク: { reading: バイク, pos: noun, glosses: [motorbike], jlpt: 5 }
+救急車: { furigana: "救[きゅう]急[きゅう]車[しゃ]", pos: noun, glosses: [ambulance], jlpt: 5 }
+
+# ---------------------------------------------------------------------------
 # Themed words. jlpt: 0 = not tagged yet (not on the JLPT list, or level unverified).
 # ---------------------------------------------------------------------------
 
@@ -373,7 +654,7 @@ ICカード: { furigana: "IC[アイシー]カード", pos: noun, glosses: [IC ca
 レシート: { reading: レシート, pos: noun, glosses: [receipt], jlpt: 0 }
 お釣り:   { furigana: "お釣[つ]り", pos: noun, glosses: [change (money back)], jlpt: 4 }
 袋:       { furigana: "袋[ふくろ]", pos: noun, glosses: [bag], jlpt: 5 }
-現金:     { furigana: "現[げん]金[きん]", pos: noun, glosses: [cash], jlpt: 0 }
+現金:     { furigana: "現[げん]金[きん]", pos: noun, glosses: [cash], jlpt: 4 }
 割り箸:   { furigana: "割[わ]り箸[ばし]", pos: noun, glosses: [disposable chopsticks], jlpt: 0 }
 
 # ご飯 a quick meal
